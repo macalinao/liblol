@@ -1,0 +1,2 @@
+lol = {}
+window.lol = lol
