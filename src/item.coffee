@@ -1,4 +1,6 @@
 #<< main
+#<< item_effects
+
 lol.items = {}
 
 item = (name, item) ->
