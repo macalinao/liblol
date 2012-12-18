@@ -8,5 +8,5 @@ item "Boots of Mobility",
   recipe: ["Boots of Speed"]
 
   passives: [
-    itemEffects.enhancedMovement(45)
+    itemEffects.enhancedMovement 45
   ]

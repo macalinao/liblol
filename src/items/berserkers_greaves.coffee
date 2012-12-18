@@ -10,5 +10,5 @@ item "Berserker's Greaves",
   recipe: ["Boots of Speed", "Dagger"]
 
   passives: [
-    itemEffects.enhancedMovement(45)
+    itemEffects.enhancedMovement 45
   ]

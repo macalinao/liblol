@@ -1,5 +1,6 @@
-toast 'src'
-	minify: no
+toast 'src',
+  minify: no
+  packaging: no
 
-	release: 'build/liblol.js'
-	debug: 'build/liblol-debug.js'
+  release: 'build/liblol.js'
+  debug: 'build/liblol-debug.js'

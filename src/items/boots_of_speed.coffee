@@ -6,5 +6,5 @@ item "Boots of Speed",
   sell: 245
 
   passives: [
-    itemEffects.enhancedMovement(25)
+    itemEffects.enhancedMovement 25
   ]

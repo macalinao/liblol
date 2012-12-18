@@ -62,6 +62,9 @@ itemEffects = (->
       desc: "Gain +4 additional gold every 10 seconds."
       applyToStats: (stats) -> gp10: 4
 
+  maim: (chance, amt) ->
+    desc: "Your basic attacks against minions and monsters have a #{chance}% chance to deal #{amt} bonus magic damage."
+
   manaFont: ->
     makeEffect "Mana Font",
       desc: "Increases your mana regeneration by 1% per 1% mana you are missing."
@@ -77,9 +80,17 @@ itemEffects = (->
       cd: 180
       desc: "Transforms a nearby siege minion to a more powerful unit. You gain all the gold this unit earns."
 
+  rend: ->
+    makeEffect "Rend",
+      desc: "Basic attacks deal 10 bonus true damage to monsters."
+
   slowResist: ->
     makeEffect "Slow Resist",
       desc: "Movement slowing effects are reduced by 25%."
+
+  spellblade: (desc) ->
+    makeEffect "Spellblade",
+      desc: desc
 
   transmute: ->
     makeEffect "Transmute",
