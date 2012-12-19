@@ -19,9 +19,20 @@ lol.itemEffects = (->
       desc: "Gain attack damage equal to 2% of your maximum mana."
       applyToStats: (stats) -> ad: mana * 0.02
 
+  cleave: ->
+    makeEffect "Cleave",
+      meleeOnly: yes
+      desc: "Your attacks deal physical damage up to 60% of your Attack Damage to units around your target, decaying down to 20% near the edge."
+
   coldSteel: (as, ms, dur) ->
     makeEffect "Cold Steel",
       desc: "If you are hit by a basic attack, you slow the attacker's attack speed by #{as}% #{if ms then "and their movement speed by 10% " else ""}for #{dur} seconds."
+
+  crescent: ->
+    makeEffect "Crescent",
+      meleeOnly: yes
+      cd: 10
+      desc: "Deals physical damage up to 100% of your Attack Damage to units around you, decaying down to 60% near the edge."
 
   eleisasBlessing: ->
     makeEffect "Eleisa's Blessing",
