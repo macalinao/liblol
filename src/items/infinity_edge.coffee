@@ -1,5 +1,5 @@
 #<< item
-item "Infinity Edge",
+lol.item "Infinity Edge",
   code: 3031
 
   ad: 70

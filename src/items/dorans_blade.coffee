@@ -1,5 +1,5 @@
 #<< item
-item "Doran's Blade",
+lol.item "Doran's Blade",
   code: 1055
 
   health: 80

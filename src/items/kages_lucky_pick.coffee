@@ -1,5 +1,5 @@
 #<< item
-item "Kage's Lucky Pick",
+lol.item "Kage's Lucky Pick",
   code: 3098
 
   ap: 25

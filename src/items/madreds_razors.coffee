@@ -1,5 +1,5 @@
 #<< item
-item "Madred's Razors",
+lol.item "Madred's Razors",
   code: 3106
 
   armor: 25

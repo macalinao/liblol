@@ -1,5 +1,5 @@
 #<< item
-item "Blasting Wand",
+lol.item "Blasting Wand",
   code: 1026
 
   ap: 40

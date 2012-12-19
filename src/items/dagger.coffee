@@ -1,5 +1,5 @@
 #<< item
-item "Dagger",
+lol.item "Dagger",
   code: 1042
 
   as: 12

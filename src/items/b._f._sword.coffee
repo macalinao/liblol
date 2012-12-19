@@ -1,5 +1,5 @@
 #<< item
-item "B. F. Sword",
+lol.item "B. F. Sword",
   code: 1038
 
   ad: 45

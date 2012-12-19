@@ -1,5 +1,5 @@
 #<< item
-item "Frozen Mallet",
+lol.item "Frozen Mallet",
   code: 3022
 
   health: 700

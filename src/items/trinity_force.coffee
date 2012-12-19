@@ -1,5 +1,5 @@
 #<< item
-item "Trinity Force",
+lol.item "Trinity Force",
   code: 3078
 
   ap: 30

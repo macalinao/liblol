@@ -1,5 +1,5 @@
 #<< item
-item "Berserker's Greaves",
+lol.item "Berserker's Greaves",
   code: 3006
 
   as: 20

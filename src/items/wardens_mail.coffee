@@ -1,5 +1,5 @@
 #<< item
-item "Warden's Mail",
+lol.item "Warden's Mail",
   code: 3082
 
   armor: 50

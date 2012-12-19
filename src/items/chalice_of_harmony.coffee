@@ -1,5 +1,5 @@
 #<< item
-item "Chalice of Harmony",
+lol.item "Chalice of Harmony",
   code: 3028
 
   mr: 25

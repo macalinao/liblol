@@ -1,8 +1,9 @@
 #<< item
-item "Rabadon's Deathcap",
+lol.item "Rabadon's Deathcap",
   code: 3089
 
   ap: 120
+
   cost: 740
   sell: 2520
 

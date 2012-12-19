@@ -1,5 +1,5 @@
 #<< item
-item "Last Whisper",
+lol.item "Last Whisper",
   code: 3035
 
   ad: 40

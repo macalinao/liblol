@@ -1,5 +1,5 @@
 #<< item
-item "Mikael's Crucible",
+lol.item "Mikael's Crucible",
   code: 3222
 
   mana: 300

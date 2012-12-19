@@ -1,5 +1,5 @@
 #<< item
-item "Haunting Guise",
+lol.item "Haunting Guise",
   code: 3136
 
   ap: 25

@@ -1,5 +1,5 @@
 #<< item
-item "Hextech Revolver",
+lol.item "Hextech Revolver",
   code: 3145
 
   ap: 40

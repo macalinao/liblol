@@ -1,5 +1,5 @@
 #<< item
-item "Banshee's Veil",
+lol.item "Banshee's Veil",
   code: 3102
 
   health: 300

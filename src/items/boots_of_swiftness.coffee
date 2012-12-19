@@ -1,5 +1,5 @@
 #<< item
-item "Boots of Swiftness",
+lol.item "Boots of Swiftness",
   code: 3009
 
   cost: 650

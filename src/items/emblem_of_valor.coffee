@@ -1,5 +1,5 @@
 #<< item
-item "Emblem of Valor",
+lol.item "Emblem of Valor",
   code: 3097
 
   armor: 20

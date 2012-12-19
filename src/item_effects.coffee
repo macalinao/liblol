@@ -1,4 +1,4 @@
-itemEffects = (->
+lol.itemEffects = (->
   makeEffect = (name, params) ->
     params.name = name
     params.unique = yes
@@ -13,6 +13,15 @@ itemEffects = (->
     makeEffect "Avarice",
       desc: "Gain +2 additional gold every 10 seconds."
       applyToStats: (stats) -> gp10: 2
+
+  awe: ->
+    makeEffect "Awe",
+      desc: "Gain attack damage equal to 2% of your maximum mana."
+      applyToStats: (stats) -> ad: mana * 0.02
+
+  coldSteel: (as, ms, dur) ->
+    makeEffect "Cold Steel",
+      desc: "If you are hit by a basic attack, you slow the attacker's attack speed by #{as}% #{if ms then "and their movement speed by 10% " else ""}for #{dur} seconds."
 
   eleisasBlessing: ->
     makeEffect "Eleisa's Blessing",
@@ -63,7 +72,12 @@ itemEffects = (->
       applyToStats: (stats) -> gp10: 4
 
   maim: (chance, amt) ->
-    desc: "Your basic attacks against minions and monsters have a #{chance}% chance to deal #{amt} bonus magic damage."
+    makeEffect "Maim",
+      desc: "Your basic attacks against minions and monsters have a #{chance}% chance to deal #{amt} bonus magic damage."
+
+  manaCharge: (attack, bonus) ->
+    makeEffect "Mana Charge",
+      desc: "Each time you #{if attack then "attack, " else ""} cast a spell or spend mana, your maximum mana increases by #{bonus} (3 second cooldown). Bonus caps at +750 bonus mana."
 
   manaFont: ->
     makeEffect "Mana Font",
@@ -80,6 +94,11 @@ itemEffects = (->
       cd: 180
       desc: "Transforms a nearby siege minion to a more powerful unit. You gain all the gold this unit earns."
 
+  quicksilver: (speed) ->
+    makeEffect "Quicksilver",
+      cd: 90
+      desc: "Removes all debuffs from your champion. #{if speed then "Melee champions also gain +50% movement speed for 1 second. " else ""}"
+
   rend: ->
     makeEffect "Rend",
       desc: "Basic attacks deal 10 bonus true damage to monsters."
@@ -91,6 +110,10 @@ itemEffects = (->
   spellblade: (desc) ->
     makeEffect "Spellblade",
       desc: desc
+
+  tenacity: ->
+    makeEffect "Tenacity",
+      desc: "The duration of stuns, slows, taunts, fears, silences, blinds and immobilizes are reduced by 35%."
 
   transmute: ->
     makeEffect "Transmute",

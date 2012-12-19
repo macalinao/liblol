@@ -1,5 +1,5 @@
 #<< item
-item "Zhonya's Hourglass",
+lol.item "Zhonya's Hourglass",
   code: 3157
 
   ap: 100

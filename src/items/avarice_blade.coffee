@@ -1,5 +1,5 @@
 #<< item
-item "Avarice Blade",
+lol.item "Avarice Blade",
   code: 3093
 
   crit: 10

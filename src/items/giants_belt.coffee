@@ -1,5 +1,5 @@
 #<< item
-item "Giant's Belt"
+lol.item "Giant's Belt"
   code: 1011
 
   health: 400

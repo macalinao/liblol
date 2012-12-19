@@ -1,5 +1,5 @@
 #<< item
-item "Cloth Armor",
+lol.item "Cloth Armor",
   code: 1029
 
   armor: 15

@@ -1,5 +1,5 @@
 #<< item
-item "Aegis of the Legion",
+lol.item "Aegis of the Legion",
   code: 3105
 
   health: 250

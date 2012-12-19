@@ -1,5 +1,5 @@
 #<< item
-item "Rejuvenation Bead",
+lol.item "Rejuvenation Bead",
   code: 1006
 
   hp5: 5

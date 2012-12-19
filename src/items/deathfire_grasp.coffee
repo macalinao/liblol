@@ -1,5 +1,5 @@
 #<< item
-item "Deathfire Grasp",
+lol.item "Deathfire Grasp",
   code: 3128
 
   ap: 100

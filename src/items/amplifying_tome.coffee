@@ -1,5 +1,5 @@
 #<< item
-item "Amplifying Tome",
+lol.item "Amplifying Tome",
   code: 1052
 
   ap: 20
