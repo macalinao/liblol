@@ -7,3 +7,7 @@ lol.item "Warden's Mail",
   sell: 770
 
   recipe: ["Cloth Armor", "Cloth Armor"]
+
+  passives: [
+    itemEffects.coldSteel(20, 0, 2)
+  ]
