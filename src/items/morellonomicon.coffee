@@ -1,5 +1,5 @@
 #<< item
-lol.item "Morellonomicon",
+lol._defItem "Morellonomicon",
   code: 3165
 
   ap: 75

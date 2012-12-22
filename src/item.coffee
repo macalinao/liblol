@@ -3,5 +3,5 @@
 
 lol.items = {}
 
-lol.item = (name, item) ->
+lol._defItem = (name, item) ->
   lol.items[name] = item

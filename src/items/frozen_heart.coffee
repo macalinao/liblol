@@ -1,5 +1,5 @@
 #<< item
-lol.item "Frozen Heart",
+lol._defItem "Frozen Heart",
   code: 3110
 
   armor: 90

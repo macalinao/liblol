@@ -1,5 +1,5 @@
 #<< item
-lol.item "Nashor's Tooth",
+lol._defItem "Nashor's Tooth",
   code: 3115
 
   ap: 65

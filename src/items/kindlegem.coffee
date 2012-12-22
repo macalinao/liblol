@@ -1,5 +1,5 @@
 #<< item
-lol.item "Kindlegem",
+lol._defItem "Kindlegem",
   code: 3067
 
   health: 200

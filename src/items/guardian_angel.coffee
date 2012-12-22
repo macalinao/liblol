@@ -1,5 +1,5 @@
 #<< item
-lol.item "Guardian Angel",
+lol._defItem "Guardian Angel",
   code: 3026
 
   armor: 50

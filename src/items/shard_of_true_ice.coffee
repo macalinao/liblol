@@ -1,5 +1,5 @@
 #<< item
-lol.item "Shard of True Ice",
+lol._defItem "Shard of True Ice",
   code: 3092
 
   ap: 45

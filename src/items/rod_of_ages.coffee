@@ -1,5 +1,5 @@
 #<< item
-lol.item "Rod of Ages",
+lol._defItem "Rod of Ages",
   code: 3027
 
   health: 450

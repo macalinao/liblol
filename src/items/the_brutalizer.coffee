@@ -1,5 +1,5 @@
 #<< item
-lol.item "The Brutalizer",
+lol._defItem "The Brutalizer",
   code: 3134
 
   ad: 25

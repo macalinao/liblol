@@ -1,5 +1,5 @@
 #<< item
-lol.item "Ninja Tabi",
+lol._defItem "Ninja Tabi",
   code: 3047
 
   armor: 25

@@ -1,5 +1,5 @@
 #<< item
-lol.item "Glacial Shroud",
+lol._defItem "Glacial Shroud",
   code: 3024
 
   armor: 40

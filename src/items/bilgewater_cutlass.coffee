@@ -1,5 +1,5 @@
 #<< item
-lol.item "Bilgewater Cutlass",
+lol._defItem "Bilgewater Cutlass",
   code: 3144
 
   ad: 40

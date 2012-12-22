@@ -1,5 +1,5 @@
 #<< item
-lol.item "Wit's End",
+lol._defItem "Wit's End",
   code: 3091
 
   as: 40

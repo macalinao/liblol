@@ -1,5 +1,5 @@
 #<< item
-lol.item "Negatron Cloak",
+lol._defItem "Negatron Cloak",
   code: 1057
 
   mr: 45

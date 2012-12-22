@@ -1,5 +1,5 @@
 #<< item
-lol.item "The Bloodthirster",
+lol._defItem "The Bloodthirster",
   code: 3072
 
   ad: 70

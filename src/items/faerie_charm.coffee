@@ -1,5 +1,5 @@
 #<< item
-lol.item "Faerie Charm",
+lol._defItem "Faerie Charm",
   code: 1004
 
   mp5: 3

@@ -1,5 +1,5 @@
 #<< item
-lol.item "Athene's Unoly Grail",
+lol._defItem "Athene's Unoly Grail",
   code: 3174
 
   ap: 60

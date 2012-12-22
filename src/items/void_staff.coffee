@@ -1,5 +1,5 @@
 #<< item
-lol.item "Void Staff",
+lol._defItem "Void Staff",
   code: 3135
 
   ap: 70

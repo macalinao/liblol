@@ -1,5 +1,5 @@
 #<< item
-lol.item "Sheen",
+lol._defItem "Sheen",
   code: 3057
 
   ap: 25

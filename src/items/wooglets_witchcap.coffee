@@ -1,5 +1,5 @@
 #<< item
-lol.item "Wooglet's Witchcap",
+lol._defItem "Wooglet's Witchcap",
   code: 3090
 
   ap: 100

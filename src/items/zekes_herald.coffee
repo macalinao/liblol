@@ -1,5 +1,5 @@
 #<< item
-lol.item "Zeke's Herald",
+lol._defItem "Zeke's Herald",
   code: 3050
 
   health: 250

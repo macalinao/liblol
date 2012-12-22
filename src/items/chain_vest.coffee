@@ -1,5 +1,5 @@
 #<< item
-lol.item "Chain Vest",
+lol._defItem "Chain Vest",
   code: 1031
 
   armor: 40

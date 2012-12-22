@@ -1,5 +1,5 @@
 #<< item
-lol.item "Brawler's Gloves",
+lol._defItem "Brawler's Gloves",
   code: 1051
 
   crit: 8

@@ -1,5 +1,5 @@
 #<< item
-lol.item "Mana Manipulator",
+lol._defItem "Mana Manipulator",
   code: 3037
 
   cost: 40

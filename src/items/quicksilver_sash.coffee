@@ -1,5 +1,5 @@
 #<< item
-lol.item "Quicksilver Sash",
+lol._defItem "Quicksilver Sash",
   code: 3140
 
   mr: 45

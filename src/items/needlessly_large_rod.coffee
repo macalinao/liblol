@@ -1,5 +1,5 @@
 #<< item
-lol.item "Needlessly Large Rod",
+lol._defItem "Needlessly Large Rod",
   code: 1058
 
   ap: 80

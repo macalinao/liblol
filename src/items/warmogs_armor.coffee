@@ -1,5 +1,5 @@
 #<< item
-lol.item "Warmog's Armor",
+lol._defItem "Warmog's Armor",
   code: 3080
 
   health: 1000

@@ -1,5 +1,5 @@
 #<< item
-lol.item "Cloak of Agility",
+lol._defItem "Cloak of Agility",
   code: 1018
 
   crit: 15

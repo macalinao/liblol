@@ -1,5 +1,5 @@
 #<< item
-lol.item "Catalyst the Protector",
+lol._defItem "Catalyst the Protector",
   code: 3010
 
   health: 200

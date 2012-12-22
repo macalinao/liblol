@@ -1,5 +1,5 @@
 #<< item
-lol.item "Rylai's Crystal Scepter",
+lol._defItem "Rylai's Crystal Scepter",
   code: 3116
 
   ap: 80

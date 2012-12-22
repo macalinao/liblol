@@ -1,5 +1,5 @@
 #<< item
-lol.item "Will of the Ancients",
+lol._defItem "Will of the Ancients",
   code: 3152
 
   ap: 50

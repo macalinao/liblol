@@ -1,5 +1,5 @@
 #<< item
-lol.item "Doran's Ring",
+lol._defItem "Doran's Ring",
   code: 1056
 
   ap: 15

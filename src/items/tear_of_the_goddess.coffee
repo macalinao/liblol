@@ -1,5 +1,5 @@
 #<< item
-lol.item "Tear of the Goddess",
+lol._defItem "Tear of the Goddess",
   code: 3070
 
   mana: 250

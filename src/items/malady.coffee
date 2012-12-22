@@ -1,5 +1,5 @@
 #<< item
-lol.item "Malady",
+lol._defItem "Malady",
   code: 3114
 
   ap: 25

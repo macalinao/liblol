@@ -1,5 +1,5 @@
 #<< item
-lol.item "Philosopher's Stone",
+lol._defItem "Philosopher's Stone",
   code: 3096
 
   hp5: 7

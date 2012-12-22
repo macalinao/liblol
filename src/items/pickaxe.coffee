@@ -1,5 +1,5 @@
 #<< item
-lol.item "Pickaxe",
+lol._defItem "Pickaxe",
   code: 1037
 
   ad: 25

@@ -1,5 +1,5 @@
 #<< item
-lol.item "Spirit Visage",
+lol._defItem "Spirit Visage",
   code: 3065
 
   health: 200

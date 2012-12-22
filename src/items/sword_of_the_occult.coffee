@@ -1,5 +1,5 @@
 #<< item
-lol.item "Sword of the Occult",
+lol._defItem "Sword of the Occult",
   code: 3141
 
   ad: 10

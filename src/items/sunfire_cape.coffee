@@ -1,5 +1,5 @@
 #<< item
-lol.item "Sunfire Cape",
+lol._defItem "Sunfire Cape",
   code: 3068
 
   armor: 45
