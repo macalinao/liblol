@@ -1,4 +1,5 @@
 #<< main
+#<< stats
 #<< item_effects
 
 lol.items = {}
