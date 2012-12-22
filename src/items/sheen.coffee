@@ -11,5 +11,5 @@ lol._defItem "Sheen",
   recipe: ["Sapphire Crystal", "Amplifying Tome"]
 
   passives: [
-    itemEffects.spellblade("On cast, your next standard attack deals additional physical damage equal to 100% of your base attack damage. (2 second cooldown)")
+    lol.itemEffects.spellblade("On cast, your next standard attack deals additional physical damage equal to 100% of your base attack damage. (2 second cooldown)")
   ]

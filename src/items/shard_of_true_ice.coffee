@@ -8,10 +8,10 @@ lol._defItem "Shard of True Ice",
 
   recipe: ["Kage's Lucky Pick", "Mana Manipulator"]
 
-  aura: itemEffects.manaWarp()
+  aura: lol.itemEffects.manaWarp()
 
   passives: [
-    itemEffects.luckyShadow()
+    lol.itemEffects.luckyShadow()
   ]
 
   active:

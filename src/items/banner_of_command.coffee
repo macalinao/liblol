@@ -10,8 +10,8 @@ lol._defItem "Banner of Command",
 
   recipe: ["Blasting Wand", "Emblem of Valor"]
 
-  aura: itemEffects.valor 10, yes
+  aura: lol.itemEffects.valor 10, yes
 
-  active: itemEffects.promote()
+  active: lol.itemEffects.promote()
 
   maps: ["Summoner's Rift"]

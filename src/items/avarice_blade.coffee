@@ -9,6 +9,6 @@ lol._defItem "Avarice Blade",
   recipe: ["Brawler's Gloves"]
 
   passives: [
-    itemEffects.avarice(),
-    itemEffects.greed()
+    lol.itemEffects.avarice(),
+    lol.itemEffects.greed()
   ]

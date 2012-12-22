@@ -15,5 +15,5 @@ lol._defItem "Rod of Ages",
     {
       desc: "This item gains 20 health, 20 mana and 2 ability power every minute, up to 10 times."
     },
-    itemEffects.valorsReward()
+    lol.itemEffects.valorsReward()
   ]

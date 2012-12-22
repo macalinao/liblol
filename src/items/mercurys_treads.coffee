@@ -10,6 +10,6 @@ lol._defItem "Mercury's Treads",
   recipe: ["Boots of Speed", "Null-Magic Mantle"]
 
   passives: [
-    itemEffects.enhancedMovement(45),
-    itemEffects.tenacity()
+    lol.itemEffects.enhancedMovement(45),
+    lol.itemEffects.tenacity()
   ]

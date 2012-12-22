@@ -11,5 +11,5 @@ lol._defItem "Chalice of Harmony",
   recipe: ["Faerie Charm", "Null-Magic Mantle"]
 
   passives: [
-    itemEffects.manaFont()
+    lol.itemEffects.manaFont()
   ]

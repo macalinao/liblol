@@ -10,5 +10,5 @@ lol._defItem "Sorceror's Shoes",
   recipe: ["Boots of Speed"]
 
   passives: [
-    itemEffects.enhancedMovement(45)
+    lol.itemEffects.enhancedMovement(45)
   ]

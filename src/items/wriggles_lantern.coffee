@@ -12,7 +12,7 @@ lol._defItem "Wriggle's Lantern",
   recipe: ["Madred's Razors", "Vampiric Scepter"]
 
   passives: [
-    itemEffects.maim(25, 500)
+    lol.itemEffects.maim(25, 500)
   ]
 
   active:

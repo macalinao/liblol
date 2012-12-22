@@ -6,5 +6,5 @@ lol._defItem "Boots of Speed",
   sell: 245
 
   passives: [
-    itemEffects.enhancedMovement 25
+    lol.itemEffects.enhancedMovement 25
   ]

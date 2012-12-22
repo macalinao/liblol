@@ -11,5 +11,5 @@ lol._defItem "Catalyst the Protector",
   recipe: ["Ruby Crystal", "Sapphire Crystal"]
 
   passives: [
-    itemEffects.valorsReward()
+    lol.itemEffects.valorsReward()
   ]

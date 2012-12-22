@@ -13,5 +13,5 @@ lol._defItem "Ionian Boots of Lucidity",
       desc: "+15% cooldown reduction"
       applyToStats: (stats) -> cdr: 15
     },
-    itemEffects.enhancedMovement 45
+    lol.itemEffects.enhancedMovement 45
   ]

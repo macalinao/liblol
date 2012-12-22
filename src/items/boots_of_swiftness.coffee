@@ -8,6 +8,6 @@ lol._defItem "Boots of Swiftness",
   recipes: ["Boots of Speed"]
 
   passives: [
-    itemEffects.enhancedMovement(60),
-    itemEffects.slowResist()
+    lol.itemEffects.enhancedMovement(60),
+    lol.itemEffects.slowResist()
   ]

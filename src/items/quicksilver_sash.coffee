@@ -9,4 +9,4 @@ lol._defItem "Quicksilver Sash",
 
   recipe: ["Negatron Cloak"]
 
-  active: itemEffects.quicksilver no
+  active: lol.itemEffects.quicksilver no

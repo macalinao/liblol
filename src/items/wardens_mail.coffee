@@ -9,5 +9,5 @@ lol._defItem "Warden's Mail",
   recipe: ["Cloth Armor", "Cloth Armor"]
 
   passives: [
-    itemEffects.coldSteel(20, 0, 2)
+    lol.itemEffects.coldSteel(20, 0, 2)
   ]

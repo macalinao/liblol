@@ -10,5 +10,5 @@ lol._defItem "Kage's Lucky Pick",
   recipe: ["Amplifying Tome"]
 
   passives: [
-    itemEffects.luckyShadow()
+    lol.itemEffects.luckyShadow()
   ]

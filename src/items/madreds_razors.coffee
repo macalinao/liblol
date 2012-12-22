@@ -10,6 +10,6 @@ lol._defItem "Madred's Razors",
   recipe: ["Cloth Armor", "Hunter's Machete"]
 
   passives: [
-    itemEffects.maim(25, 300),
-    itemEffects.rend()
+    lol.itemEffects.maim(25, 300),
+    lol.itemEffects.rend()
   ]

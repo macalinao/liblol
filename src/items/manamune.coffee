@@ -9,6 +9,6 @@ lol._defItem "Manamune",
   recipe: ["Tear of the Goddess", "Long Sword"]
 
   passives: [
-    itemEffects.awe(),
-    itemEffects.manaCharge(no, 4)
+    lol.itemEffects.awe(),
+    lol.itemEffects.manaCharge(no, 4)
   ]

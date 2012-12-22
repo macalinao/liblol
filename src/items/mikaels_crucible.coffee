@@ -16,5 +16,5 @@ lol._defItem "Mikael's Crucible",
     desc: "Removes all stuns, roots, taunts, fears, silences and slows on an ally and heals them for 150 + 15% of their missing health."
 
   passives: [
-    itemEffects.manaFont()
+    lol.itemEffects.manaFont()
   ]

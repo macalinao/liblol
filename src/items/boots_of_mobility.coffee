@@ -8,5 +8,5 @@ lol._defItem "Boots of Mobility",
   recipe: ["Boots of Speed"]
 
   passives: [
-    itemEffects.enhancedMovement 45
+    lol.itemEffects.enhancedMovement 45
   ]

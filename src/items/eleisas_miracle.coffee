@@ -11,6 +11,6 @@ lol._defItem "Eleisa's Miracle",
   recipe: ["Philosopher's Stone"]
 
   passives: [
-    itemEffects.aid(),
-    itemEffects.eleisasBlessing()
+    lol.itemEffects.aid(),
+    lol.itemEffects.eleisasBlessing()
   ]

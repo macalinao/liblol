@@ -11,5 +11,5 @@ lol._defItem "Tear of the Goddess",
   recipe: ["Faerie Charm", "Sapphire Crystal"]
 
   passive: [
-    itemEffects.manaCharge no, 4
+    lol.itemEffects.manaCharge no, 4
   ]

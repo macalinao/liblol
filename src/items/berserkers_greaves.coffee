@@ -10,5 +10,5 @@ lol._defItem "Berserker's Greaves",
   recipe: ["Boots of Speed", "Dagger"]
 
   passives: [
-    itemEffects.enhancedMovement 45
+    lol.itemEffects.enhancedMovement 45
   ]

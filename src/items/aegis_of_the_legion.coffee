@@ -11,4 +11,4 @@ lol._defItem "Aegis of the Legion",
 
   recipe: ["Emblem of Valor", "Ruby Crystal", "Null-Magic Mantle"]
 
-  aura: itemEffects.legion()
+  aura: lol.itemEffects.legion()

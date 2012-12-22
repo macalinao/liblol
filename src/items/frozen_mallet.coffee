@@ -11,5 +11,5 @@ lol._defItem "Frozen Mallet",
   recipe: ["Phage", "Giant's Belt"]
 
   passives: [
-    itemEffects.icy 100, 40, 1.5, 30
+    lol.itemEffects.icy 100, 40, 1.5, 30
   ]

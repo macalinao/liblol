@@ -20,5 +20,5 @@ lol._defItem "Athene's Unoly Grail",
       unique: yes
       desc: "Restores 12% of your max mana on kill or assist."
     },
-    itemEffects.manaFont()
+    lol.itemEffects.manaFont()
   ]

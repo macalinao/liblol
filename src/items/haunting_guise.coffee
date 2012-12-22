@@ -11,5 +11,5 @@ lol._defItem "Haunting Guise",
   recipe: ["Ruby Crystal", "Amplifying Tome"]
 
   passives: [
-    itemEffects.eyesOfPain()
+    lol.itemEffects.eyesOfPain()
   ]

@@ -10,7 +10,7 @@ lol._defItem "Ninja Tabi",
   recipe: ["Boots of Spead", "Cloth Armor"]
 
   passives: [
-    itemEffects.enhancedMovement(45),
+    lol.itemEffects.enhancedMovement(45),
     {
       unique: yes
       desc: "Blocks 10% of the damage from champion basic attacks."

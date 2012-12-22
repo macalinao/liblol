@@ -11,7 +11,7 @@ lol._defItem "Tiamat",
   recipe: ["Pickaxe", "Long Sword", "Rejuvenation Bead", "Rejuvenation Bead"]
 
   passives: [
-    itemEffects.cleave()
+    lol.itemEffects.cleave()
   ]
 
-  active: itemEffects.crescent()
+  active: lol.itemEffects.crescent()

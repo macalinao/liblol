@@ -11,7 +11,7 @@ lol._defItem "Randuin's Omen",
   recipe: ["Giant's Belt", "Warden's Mail"]
 
   passives: [
-    itemEffects.coldSteel(20, 10, 1.5)
+    lol.itemEffects.coldSteel(20, 10, 1.5)
   ]
 
   active:

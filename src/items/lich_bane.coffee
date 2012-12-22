@@ -12,5 +12,5 @@ lol._defItem "Lich Bane",
   recipe: ["Sheen", "Blasting Wand"]
 
   passives: [
-    itemEffects.spellblade "After using an ability, your next basic attack deals bonus magic damage equal to 50 + 75% of your ability power. (2 second cooldown)"
+    lol.itemEffects.spellblade "After using an ability, your next basic attack deals bonus magic damage equal to 50 + 75% of your ability power. (2 second cooldown)"
   ]

@@ -11,5 +11,5 @@ lol._defItem "Hexdrinker",
   recipe: ["Long Sword", "Null-Magic Mantle"]
 
   passives: [
-    itemEffects.lifeline 250
+    lol.itemEffects.lifeline 250
   ]

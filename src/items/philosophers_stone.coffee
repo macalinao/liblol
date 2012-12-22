@@ -11,5 +11,5 @@ lol._defItem "Philosopher's Stone",
   recipe: ["Faerie Charm", "Rejuvenation Bead"]
 
   passives: [
-    itemEffects.transmute()
+    lol.itemEffects.transmute()
   ]

@@ -8,4 +8,4 @@ lol._defItem "Emblem of Valor",
 
   recipe: ["Cloth Armor", "Rejuvenation Bead"]
 
-  aura: itemEffects.valor 7, no
+  aura: lol.itemEffects.valor 7, no
