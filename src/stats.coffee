@@ -1,5 +1,8 @@
 #<< main
 lol.stats =
+  ##
+  # The names of all stats.
+  # 
   names:
     armor: "Armor"
     ap: "Ability Power"
@@ -13,7 +16,11 @@ lol.stats =
     ms: "Movement Speed"
     aPen: "Armor Penetration"
     mPen: "Magic Penetration"
+    range: "Range"
 
+  ##
+  # Combines multiple stats together.
+  #
   combine: (a) ->
     finalStats = {}
 
@@ -40,16 +47,20 @@ lol.stats =
     finalStats.passives = []
     finalStats.actives = []
 
+    # Check all item effects
     for el in a
+      # Check auras
       if el.aura
         unless isDuplicateEffect finalStats.auras, el.aura
           finalStats.auras.push el.aura
 
+      # Check passives
       if el.passives
         for passive in el.passives
           unless isDuplicateEffect finalStats.passives, passive
             finalStats.passives.push passive
       
+      # Check actives
       if el.active
         unless isDuplicateEffect finalStats.actives, el.active
           finalStats.actives.push el.active
