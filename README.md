@@ -3,8 +3,7 @@ liblol
 
 A library containing League of Legends data.
 
-License
--------
+## License
 ```
 Copyright 2012 Ian Macalinao
 http://simplyian.com/
