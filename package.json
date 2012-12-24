@@ -15,10 +15,10 @@
     "node": "0.9"
   },
   "dependencies": {
-    "coffee-script": "*"
   },
   "devDependencies": {
     "mocha": "*",   
-    "should": "*"
+    "should": "*",
+    "coffee-script": "*"
   }
 }
