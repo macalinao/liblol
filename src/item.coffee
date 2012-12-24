@@ -27,8 +27,9 @@ class LoLItem
     @active = params.active
 
     # Set source of all effects
-    if @aura
-      @aura.source = this
+    if @auras
+      for aura in @auras
+        aura.source = this
   
     if @passives
       for passive in @passives
