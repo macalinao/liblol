@@ -14,18 +14,8 @@ class LoLItem
 
     @code = params.code
 
-    @armor = params.armor || 0
-    @ap = params.ap || 0
-    @ad = params.ad || 0
-    @as = params.as || 0
-    @crit = params.crit || 0
-    @critDmg = params.critDmg || 0
-    @health = params.health || 0
-    @mana = params.mana || 0
-    @mr = params.mr || 0
-    @ms = params.ms || 0
-    @aPen = params.aPen || 0
-    @mPen = params.mPen || 0
+    for stat of lol.stats.names
+      this[stat] = params[stat] || 0
 
     @cost = params.cost
     @sell = params.sell

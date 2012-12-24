@@ -17,7 +17,7 @@ lol.stats =
   combine: (a) ->
     finalStats = {}
 
-    for stat, name of lol.stats.names
+    for stat of lol.stats.names
       finalStats[stat] = 0
 
       for el in a
