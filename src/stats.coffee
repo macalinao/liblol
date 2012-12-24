@@ -89,16 +89,16 @@ lol.stats =
       # Create the final product
       finalStats = lol.stats.combine [initialStats, effectStats]
     
+      # Add our auras and passives to the final product
+      finalStats.auras = auras
+      finalStats.passives = passives
+
     # If no auras/passives, no need to calculate
     else
       finalStats = initialStats
 
 
-    # Add all the effects to the final product if they exist
-    if auras.length > 0
-      finalStats.auras = auras
-    if passives.length > 0
-      finalStats.passives = passives
+    # Add all the actives to the final product if they exist
     if actives.length > 0
       finalStats.actives = actives
 
