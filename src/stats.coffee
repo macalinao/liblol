@@ -17,6 +17,9 @@ lol.stats =
     aPen: "Armor Penetration"
     mPen: "Magic Penetration"
     range: "Range"
+    gp10: "Gold per Ten"
+    hp5: "Health Regen"
+    mp5: "Mana Regen"
 
   ##
   # Combines multiple stats together.
