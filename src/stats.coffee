@@ -17,15 +17,28 @@ lol.stats =
   combine: (a) ->
     finalStats = {}
 
+    # Get each stat
     for stat of lol.stats.names
       finalStats[stat] = 0
 
+      # Add the stats of each item to the total stats
       for el in a
         finalStats[stat] += el[stat]
 
-    # Add passives
-    finalStats.passives = []
+    isDuplicateEffect = (effects, e) ->
+      return false unless e.unique
+      return true if effect is e or effect.name is e.name for effect in effects
+      return false
 
-    # TODO wip
+    # Add auras, passives, actives
+    finalStats.auras = []
+    finalStats.passives = []
+    finalStats.actives = []
+
+    for el in a
+      finalStats.auras.push el.aura unless isDuplicateEffect finalStats.auras, el.aura
+      for passive in el.passives
+        finalStats.passives.push passive unless isDuplicateEffect finalStats.passives, passive
+      finalStats.actives.push el.active unless isDuplicateEffect finalStats.actives, el.active
 
     return finalStats
