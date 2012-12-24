@@ -4,9 +4,18 @@
   "version": "0.0.1",
   "author": "Ian Macalinao <ianmacalinao@gmail.com>",
   "homepage": "http://simplyian.com",
+  "license": "MIT",
+
+  "main": "build/liblol",
+  "keywords": [
+    "league",
+    "legends",
+    "lol",
+    "riot"
+  ],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/simplyianm/liblol.git"
   },
   "scripts": {
     "test": ""
