@@ -1,3 +1,6 @@
+##
+# Contains named item effects.
+#
 lol.itemEffects = (->
   makeEffect = (name, params) ->
     params.name = name
