@@ -25,22 +25,23 @@ lol.stats =
   # Combines multiple stats together.
   #
   combine: (a) ->
-    finalStats = {}
+    initialStats = {}
 
     # Get each stat
     for stat of lol.stats.names
-      finalStats[stat] = 0
+      initialStats[stat] = 0
 
       # Add the stats of each item to the total stats
       for el in a
-        finalStats[stat] += el[stat]
+        if el[stat]
+          initialStats[stat] += el[stat]
 
     isDuplicateEffect = (effects, e) ->
       unless e.unique
         return false
 
       for effect in effects
-        if effect is e or effect.name is e.name
+        if effect is e or (effect.name and effect.name is e.name)
           return true
 
       return false
@@ -54,21 +55,46 @@ lol.stats =
     for el in a
       # Check auras
       if el.aura
-        unless isDuplicateEffect finalStats.auras, el.aura
+        unless isDuplicateEffect auras, el.aura
           auras.push el.aura
 
       # Check passives
       if el.passives
         for passive in el.passives
-          unless isDuplicateEffect finalStats.passives, passive
+          unless isDuplicateEffect passives, passive
             passives.push passive
       
       # Check actives
       if el.active
-        unless isDuplicateEffect finalStats.actives, el.active
+        unless isDuplicateEffect actives, el.active
           actives.push el.active
 
-    # Only add the arrays if they have effects
+    # Apply auras and passives
+    finalStats = {}
+
+    # If we do have auras/passives, calculate the extra
+    if auras.length > 0 or passives.length > 0
+      # Apply all of the stats
+      effectsStats = []
+      for aura in auras
+        if aura.applyToStats
+          effectsStats.push aura.applyToStats initialStats
+      for passive in passives
+        if passive.applyToStats
+          effectsStats.push passive.applyToStats initialStats
+
+      # Combine all of the effects together
+      effectStats = lol.stats.combine effectsStats
+
+      # Create the final product
+      finalStats = lol.stats.combine [initialStats, effectStats]
+    
+    # If no auras/passives, no need to calculate
+    else
+      finalStats = initialStats
+
+
+    # Add all the effects to the final product if they exist
     if auras.length > 0
       finalStats.auras = auras
     if passives.length > 0

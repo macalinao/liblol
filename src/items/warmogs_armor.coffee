@@ -12,4 +12,5 @@ lol._defItem "Warmog's Armor",
   passives: [
     unique: yes
     desc: "You gain health regeneration equal to 1.5% of your maximum health."
+    applyToStats: (stats) -> hp5: stats.health * 0.015
   ]
