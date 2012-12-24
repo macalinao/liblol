@@ -2,7 +2,6 @@ lol.itemEffects = (->
   makeEffect = (name, params) ->
     params.name = name
     params.unique = yes
-    params.desc = name + ": " + params
     return params
 
   aid: ->

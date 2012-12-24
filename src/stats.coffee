@@ -26,8 +26,13 @@ lol.stats =
         finalStats[stat] += el[stat]
 
     isDuplicateEffect = (effects, e) ->
-      return false unless e.unique
-      return true if effect is e or effect.name is e.name for effect in effects
+      unless e.unique
+        return false
+
+      for effect in effects
+        if effect is e or effect.name is e.name
+          return true
+
       return false
 
     # Add auras, passives, actives
@@ -36,9 +41,17 @@ lol.stats =
     finalStats.actives = []
 
     for el in a
-      finalStats.auras.push el.aura unless isDuplicateEffect finalStats.auras, el.aura
-      for passive in el.passives
-        finalStats.passives.push passive unless isDuplicateEffect finalStats.passives, passive
-      finalStats.actives.push el.active unless isDuplicateEffect finalStats.actives, el.active
+      if el.aura
+        unless isDuplicateEffect finalStats.auras, el.aura
+          finalStats.auras.push el.aura
+
+      if el.passives
+        for passive in el.passives
+          unless isDuplicateEffect finalStats.passives, passive
+            finalStats.passives.push passive
+      
+      if el.active
+        unless isDuplicateEffect finalStats.actives, el.active
+          finalStats.actives.push el.active
 
     return finalStats
