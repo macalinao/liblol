@@ -43,26 +43,34 @@ lol.stats =
       return false
 
     # Add auras, passives, actives
-    finalStats.auras = []
-    finalStats.passives = []
-    finalStats.actives = []
+    auras = []
+    passives = []
+    actives = []
 
     # Check all item effects
     for el in a
       # Check auras
       if el.aura
         unless isDuplicateEffect finalStats.auras, el.aura
-          finalStats.auras.push el.aura
+          auras.push el.aura
 
       # Check passives
       if el.passives
         for passive in el.passives
           unless isDuplicateEffect finalStats.passives, passive
-            finalStats.passives.push passive
+            passives.push passive
       
       # Check actives
       if el.active
         unless isDuplicateEffect finalStats.actives, el.active
-          finalStats.actives.push el.active
+          actives.push el.active
+
+    # Only add the arrays if they have effects
+    if auras.length > 0
+      finalStats.auras = auras
+    if passives.length > 0
+      finalStats.passives = passives
+    if actives.length > 0
+      finalStats.actives = actives
 
     return finalStats
