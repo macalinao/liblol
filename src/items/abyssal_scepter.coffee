@@ -10,7 +10,8 @@ lol._defItem "Abyssal Scepter",
 
   recipe: ["Blasting Wand", "Negatron Cloak"]
 
-  aura:
+  auras: [
     unique: yes
     range: 700
     desc: "Reduces the magic resist of nearby enemies by 20"
+  ]

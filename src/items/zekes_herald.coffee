@@ -10,7 +10,8 @@ lol._defItem "Zeke's Herald",
 
   recipe: ["Kindlegem", "Vampiric Scepter"]
 
-  aura:
+  auras: [
     unique: yes
     range: 1100
     desc: "Nearby allied champions gain +20 attack damage and +10% life steal."
+  ]

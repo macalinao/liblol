@@ -10,7 +10,7 @@ lol._defItem "Banner of Command",
 
   recipe: ["Blasting Wand", "Emblem of Valor"]
 
-  aura: lol.itemEffects.valor 10, yes
+  auras: [lol.itemEffects.valor(10, yes)]
 
   active: lol.itemEffects.promote()
 

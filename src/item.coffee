@@ -22,7 +22,7 @@ class LoLItem
 
     @recipe = params.recipe
 
-    @aura = params.aura
+    @auras = params.auras
     @passives = params.passives
     @active = params.active
 

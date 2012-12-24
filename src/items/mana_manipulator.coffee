@@ -7,4 +7,4 @@ lol._defItem "Mana Manipulator",
   
   recipe: ["Faerie Charm", "Faerie Charm"]
 
-  aura: lol.itemEffects.manaWarp()
+  auras: [lol.itemEffects.manaWarp()]

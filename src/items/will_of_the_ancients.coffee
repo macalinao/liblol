@@ -9,7 +9,8 @@ lol._defItem "Will of the Ancients",
 
   recipe: ["Hextech Revolver", "Blasting Wand"]
 
-  aura:
+  auras: [
     unique: yes
     range: 1200
     desc: "Nearby allied champions gain +30 ability power and +20% spell vamp."
+  ]
