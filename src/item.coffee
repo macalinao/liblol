@@ -26,6 +26,17 @@ class LoLItem
     @passives = params.passives
     @active = params.active
 
+    # Set source of all effects
+    if @aura
+      @aura.source = this
+  
+    if @passives
+      for passive in @passives
+        passive.source = this
+  
+    if @active
+      @active.source = this
+
   getRecipe: ->
     recipe = []
     for x in @recipe
