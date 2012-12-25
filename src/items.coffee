@@ -51,6 +51,24 @@ class LoLItem
       cost += r.getTotalCost()
     return cost
 
+##
+# Get all items that affect the given stats.
+#
+lol.items.getAllByStats = (statNames) ->
+  ret = []
+  for item in lol.items.list
+    stats = lol.stats.combine [item] # Combine to get final stats in case of passives/auras
+    ret.push item if lol.stats.hasStats(stats, statNames)
+  return ret
+
+##
+# Sorts all items by the given comparator.
+#
+lol.items.sortItems = (comparator) -> lol.items.list.clone().sort comparator
+
+##
+# Defines a new item.
+# 
 lol.items._def = (name, item) ->
   lol.items.list[name] = new LoLItem name, item
 

@@ -106,3 +106,13 @@ lol.stats =
       finalStats.actives = actives
 
     return finalStats
+
+  ##
+  # Checks if the given stats has the given stats assigned values.
+  # 
+  # Example usage: hasStats(lol.stats.combine(...), ["ap", "ad"])
+  # 
+  hasStats: (stats, statNames) ->
+    for stat in statNames
+      return false unless stats[stat]
+    return true
