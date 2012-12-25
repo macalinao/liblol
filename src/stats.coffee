@@ -20,6 +20,8 @@ lol.stats =
     gp10: "Gold per Ten"
     hp5: "Health Regen"
     mp5: "Mana Regen"
+    ls: "Life Steal"
+    sv: "Spell Vamp"
 
   ##
   # Combines multiple stats together.
