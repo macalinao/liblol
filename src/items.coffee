@@ -64,7 +64,17 @@ lol.items.getAllByStats = (statNames) ->
 ##
 # Sorts all items by the given comparator.
 #
-lol.items.sortItems = (comparator) -> lol.items.list.clone().sort comparator
+lol.items.sortItems = (comparator) ->
+  list = []
+  for itemName, item of lol.items.list
+    list.push item
+  list.sort comparator
+  return list
+
+##
+# Makes a comparator to sort by.
+#
+lol.items.makeComparator = (property, asc = true) -> (a, b) -> if asc then (a[property] || 0) - (b[property] || 0) else (b[property] || 0) - (a[property] || 0)
 
 ##
 # Defines a new item.
