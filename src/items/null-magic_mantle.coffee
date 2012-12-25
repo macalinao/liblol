@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Null-Magic Mantle",
+lol.items._def "Null-Magic Mantle",
   code: 1033
 
   mr: 20

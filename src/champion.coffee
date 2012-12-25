@@ -30,5 +30,5 @@ class LoLChampion
     return lol.stats.combine [@getItemlessStats(level), lol.stats.combine(items), lol.stats.combine(masteries), lol.stats.combine(runes)]
 
 lol.champions.list = {}
-lol._defChamp = (name, params) ->
+lol.champions._def = (name, params) ->
   lol.champions.list[name] = new LoLChampion name, params

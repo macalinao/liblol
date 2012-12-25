@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Fiendish Codex",
+lol.items._def "Fiendish Codex",
   code: 3108
 
   ap: 30

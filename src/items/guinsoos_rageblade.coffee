@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Guinsoo's Rageblade",
+lol.items._def "Guinsoo's Rageblade",
   code: 3124
 
   ad: 30

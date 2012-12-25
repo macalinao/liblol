@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Youmuu's Ghostblade",
+lol.items._def "Youmuu's Ghostblade",
   code: 3142
 
   ad: 30

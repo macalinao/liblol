@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Doran's Shield",
+lol.items._def "Doran's Shield",
   code: 1054
 
   health: 100

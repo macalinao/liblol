@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Rabadon's Deathcap",
+lol.items._def "Rabadon's Deathcap",
   code: 3089
 
   ap: 120

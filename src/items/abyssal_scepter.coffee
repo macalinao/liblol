@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Abyssal Scepter",
+lol.items._def "Abyssal Scepter",
   code: 3001
 
   ap: 70

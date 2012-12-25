@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Mikael's Crucible",
+lol.items._def "Mikael's Crucible",
   code: 3222
 
   mana: 300

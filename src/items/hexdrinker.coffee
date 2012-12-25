@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Hexdrinker",
+lol.items._def "Hexdrinker",
   code: 3155
 
   ad: 25

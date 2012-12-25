@@ -51,6 +51,6 @@ class LoLItem
       cost += r.getTotalCost()
     return cost
 
-lol._defItem = (name, item) ->
+lol.items._def = (name, item) ->
   lol.items.list[name] = new LoLItem name, item
 

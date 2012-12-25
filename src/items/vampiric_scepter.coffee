@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Vampiric Scepter",
+lol.items._def "Vampiric Scepter",
   code: 1053
 
   ad: 10

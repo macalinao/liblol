@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Boots of Mobility",
+lol.items._def "Boots of Mobility",
   code: 3117
 
   cost: 650

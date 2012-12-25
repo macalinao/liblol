@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Sorceror's Shoes",
+lol.items._def "Sorceror's Shoes",
   code: 3020
 
   mPen: 15

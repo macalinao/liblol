@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Wriggle's Lantern",
+lol.items._def "Wriggle's Lantern",
   code: 3154
 
   armor: 30

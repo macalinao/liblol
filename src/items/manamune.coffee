@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Manamune",
+lol.items._def "Manamune",
   code: 3004
 
   mana: 250

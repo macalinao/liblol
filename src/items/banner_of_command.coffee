@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Banner of Command",
+lol.items._def "Banner of Command",
   code: 3060
 
   ap: 50

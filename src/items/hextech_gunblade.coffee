@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Hextech Gunblade",
+lol.items._def "Hextech Gunblade",
   code: 3146
 
   ad: 45

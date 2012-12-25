@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Shurelya's Reverie",
+lol.items._def "Shurelya's Reverie",
   code: 3069
 
   health: 250

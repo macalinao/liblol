@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Ruby Crystal",
+lol.items._def "Ruby Crystal",
   code: 1028
 
   health: 180

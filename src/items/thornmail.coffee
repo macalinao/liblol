@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Thornmail",
+lol.items._def "Thornmail",
   code: 3075
 
   armor: 100

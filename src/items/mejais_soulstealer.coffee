@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Mejai's Soulstealer",
+lol.items._def "Mejai's Soulstealer",
   code: 3041
 
   ap: 20

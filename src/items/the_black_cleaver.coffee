@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Black Cleaver",
+lol.items._def "Black Cleaver",
   code: 3071
 
   health: 250

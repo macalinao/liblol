@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Atma's Impaler",
+lol.items._def "Atma's Impaler",
   code: 3005
 
   armor: 45

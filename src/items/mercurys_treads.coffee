@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Mercury's Treads",
+lol.items._def "Mercury's Treads",
   code: 3111
 
   mr: 25

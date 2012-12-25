@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Randuin's Omen",
+lol.items._def "Randuin's Omen",
   code: 3143
 
   health: 500

@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Sapphire Crystal",
+lol.items._def "Sapphire Crystal",
   code: 1027
 
   mana: 200

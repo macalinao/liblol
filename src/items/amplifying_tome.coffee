@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Amplifying Tome",
+lol.items._def "Amplifying Tome",
   code: 1052
 
   ap: 20

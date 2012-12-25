@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Ionian Boots of Lucidity",
+lol.items._def "Ionian Boots of Lucidity",
   code: 3158
 
   cost: 700

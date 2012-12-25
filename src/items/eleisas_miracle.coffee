@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Eleisa's Miracle",
+lol.items._def "Eleisa's Miracle",
   code: 3173
 
   hp5: 10

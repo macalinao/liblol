@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Phage",
+lol.items._def "Phage",
   code: 3044
 
   health: 200

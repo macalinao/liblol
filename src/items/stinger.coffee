@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Stinger",
+lol.items._def "Stinger",
   code: 3101
 
   as: 40

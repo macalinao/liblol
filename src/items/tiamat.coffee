@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Tiamat",
+lol.items._def "Tiamat",
   code: 3077
 
   ad: 50

@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Boots of Speed",
+lol.items._def "Boots of Speed",
   code: 1001
 
   cost: 350

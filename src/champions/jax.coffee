@@ -2,7 +2,7 @@
 
 # NOTE:
 # Jax is obviously not like this, but this is a template while I have no internet!
-lol._defChamp "Jax",
+lol.champions._def "Jax",
   baseStats:
     health: 0
     ap: 0

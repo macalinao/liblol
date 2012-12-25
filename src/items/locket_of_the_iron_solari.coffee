@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Locket of the Iron Solari",
+lol.items._def "Locket of the Iron Solari",
   code: 3190
 
   health: 425

@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Recurve Bow",
+lol.items._def "Recurve Bow",
   code: 1043
 
   as: 30

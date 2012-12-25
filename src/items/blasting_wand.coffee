@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Blasting Wand",
+lol.items._def "Blasting Wand",
   code: 1026
 
   ap: 40

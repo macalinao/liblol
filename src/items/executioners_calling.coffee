@@ -1,5 +1,5 @@
 #<< item
-lol._defItem "Executioner's Calling",
+lol.items._def "Executioner's Calling",
   code: 3123
 
   ad: 25
