@@ -1,4 +1,10 @@
-lol._runeValues =
+#<< main
+lol.runes = {}
+
+##
+# Values of all runes.
+#
+lol.runes._runeValues =
   ap:
     cost:
       nq: [30, 165, 410]
