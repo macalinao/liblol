@@ -72,9 +72,9 @@ lol.items.sortItems = (comparator) ->
   return list
 
 ##
-# Makes a comparator to sort by.
+# Makes a comparator to sort by a given property.
 #
-lol.items.makeComparator = (property, asc = true) ->
+lol.items.byProperty = (property, asc = true) ->
   (a, b) -> 
     if asc then (a[property] || 0) - (b[property] || 0)
     else (b[property] || 0) - (a[property] || 0)
