@@ -14,4 +14,5 @@ lol.items._def "Zeke's Herald",
     unique: yes
     range: 1100
     desc: "Nearby allied champions gain +20 attack damage and +10% life steal."
+    applyToStats: (stats) -> ad: 20, ls: 10
   ]
