@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Randuin's Omen",
   code: 3143
 

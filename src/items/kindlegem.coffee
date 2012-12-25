@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Kindlegem",
   code: 3067
 

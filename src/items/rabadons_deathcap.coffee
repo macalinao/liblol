@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Rabadon's Deathcap",
   code: 3089
 

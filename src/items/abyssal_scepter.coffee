@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Abyssal Scepter",
   code: 3001
 

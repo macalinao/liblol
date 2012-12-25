@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Nashor's Tooth",
   code: 3115
 

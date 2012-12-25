@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Chalice of Harmony",
   code: 3028
 

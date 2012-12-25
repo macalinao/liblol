@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Doran's Shield",
   code: 1054
 

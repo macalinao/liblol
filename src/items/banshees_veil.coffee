@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Banshee's Veil",
   code: 3102
 

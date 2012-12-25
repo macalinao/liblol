@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Vampiric Scepter",
   code: 1053
 

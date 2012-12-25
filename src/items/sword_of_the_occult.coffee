@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Sword of the Occult",
   code: 3141
 

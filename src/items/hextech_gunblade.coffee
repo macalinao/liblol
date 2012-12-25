@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Hextech Gunblade",
   code: 3146
 

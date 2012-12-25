@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Doran's Ring",
   code: 1056
 

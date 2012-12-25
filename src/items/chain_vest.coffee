@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Chain Vest",
   code: 1031
 

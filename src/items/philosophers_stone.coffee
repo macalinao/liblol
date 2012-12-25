@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Philosopher's Stone",
   code: 3096
 

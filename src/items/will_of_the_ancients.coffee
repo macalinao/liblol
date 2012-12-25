@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Will of the Ancients",
   code: 3152
 

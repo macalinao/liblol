@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Zeke's Herald",
   code: 3050
 

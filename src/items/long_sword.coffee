@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Long Sword",
   code: 1036
 

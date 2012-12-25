@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Spirit Visage",
   code: 3065
 

@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Sunfire Cape",
   code: 3068
 

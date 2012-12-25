@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Fiendish Codex",
   code: 3108
 

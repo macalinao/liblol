@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Zhonya's Hourglass",
   code: 3157
 

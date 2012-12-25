@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Black Cleaver",
   code: 3071
 

@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Void Staff",
   code: 3135
 

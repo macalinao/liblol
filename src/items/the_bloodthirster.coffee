@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "The Bloodthirster",
   code: 3072
 

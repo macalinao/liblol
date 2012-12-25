@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Lich Bane",
   code: 3100
 

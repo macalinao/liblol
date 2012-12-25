@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Aegis of the Legion",
   code: 3105
 

@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Wooglet's Witchcap",
   code: 3090
 

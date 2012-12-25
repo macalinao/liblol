@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Stinger",
   code: 3101
 

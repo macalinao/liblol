@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Mejai's Soulstealer",
   code: 3041
 

@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Rejuvenation Bead",
   code: 1006
 

@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Hexdrinker",
   code: 3155
 

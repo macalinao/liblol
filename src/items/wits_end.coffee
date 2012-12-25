@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Wit's End",
   code: 3091
 

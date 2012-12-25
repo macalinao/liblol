@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Quicksilver Sash",
   code: 3140
 

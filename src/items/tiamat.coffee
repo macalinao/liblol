@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Tiamat",
   code: 3077
 

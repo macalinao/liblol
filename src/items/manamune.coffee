@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Manamune",
   code: 3004
 

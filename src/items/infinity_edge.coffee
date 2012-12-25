@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Infinity Edge",
   code: 3031
 

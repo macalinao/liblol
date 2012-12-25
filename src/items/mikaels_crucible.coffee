@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Mikael's Crucible",
   code: 3222
 

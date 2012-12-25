@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Frozen Heart",
   code: 3110
 

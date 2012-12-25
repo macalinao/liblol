@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Hextech Revolver",
   code: 3145
 

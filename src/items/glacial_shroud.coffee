@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Glacial Shroud",
   code: 3024
 

@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Frozen Mallet",
   code: 3022
 

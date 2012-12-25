@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Madred's Razors",
   code: 3106
 

@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Mana Manipulator",
   code: 3037
 

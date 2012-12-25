@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Trinity Force",
   code: 3078
 

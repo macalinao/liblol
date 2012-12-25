@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Tear of the Goddess",
   code: 3070
 

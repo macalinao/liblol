@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Faerie Charm",
   code: 1004
 

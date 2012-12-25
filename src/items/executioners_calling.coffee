@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Executioner's Calling",
   code: 3123
 

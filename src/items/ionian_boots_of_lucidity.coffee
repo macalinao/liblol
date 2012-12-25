@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Ionian Boots of Lucidity",
   code: 3158
 

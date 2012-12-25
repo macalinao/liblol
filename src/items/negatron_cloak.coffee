@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Negatron Cloak",
   code: 1057
 

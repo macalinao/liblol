@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Locket of the Iron Solari",
   code: 3190
 

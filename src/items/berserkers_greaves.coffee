@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Berserker's Greaves",
   code: 3006
 

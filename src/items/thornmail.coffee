@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Thornmail",
   code: 3075
 

@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Zeal",
   code: 3086
 

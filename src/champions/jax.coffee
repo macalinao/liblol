@@ -1,4 +1,4 @@
-#<< champion
+#<< champions
 
 # NOTE:
 # Jax is obviously not like this, but this is a template while I have no internet!

@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "B. F. Sword",
   code: 1038
 

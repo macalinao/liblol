@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Needlessly Large Rod",
   code: 1058
 

@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Catalyst the Protector",
   code: 3010
 

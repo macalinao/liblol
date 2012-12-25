@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Mercury's Treads",
   code: 3111
 

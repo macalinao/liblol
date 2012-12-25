@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Athene's Unoly Grail",
   code: 3174
 

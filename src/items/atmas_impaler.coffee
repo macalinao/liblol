@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Atma's Impaler",
   code: 3005
 

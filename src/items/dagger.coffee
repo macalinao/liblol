@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Dagger",
   code: 1042
 

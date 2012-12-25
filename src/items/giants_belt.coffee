@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Giant's Belt"
   code: 1011
 

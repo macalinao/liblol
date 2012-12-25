@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Ninja Tabi",
   code: 3047
 

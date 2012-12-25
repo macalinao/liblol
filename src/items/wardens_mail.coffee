@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Warden's Mail",
   code: 3082
 

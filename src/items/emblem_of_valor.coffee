@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Emblem of Valor",
   code: 3097
 

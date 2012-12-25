@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Guardian Angel",
   code: 3026
 

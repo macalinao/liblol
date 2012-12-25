@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Avarice Blade",
   code: 3093
 

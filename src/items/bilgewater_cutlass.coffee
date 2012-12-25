@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Bilgewater Cutlass",
   code: 3144
 

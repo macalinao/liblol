@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Null-Magic Mantle",
   code: 1033
 

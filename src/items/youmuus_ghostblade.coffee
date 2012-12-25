@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Youmuu's Ghostblade",
   code: 3142
 

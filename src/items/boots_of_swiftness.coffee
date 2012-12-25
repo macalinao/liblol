@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Boots of Swiftness",
   code: 3009
 

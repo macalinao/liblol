@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Recurve Bow",
   code: 1043
 

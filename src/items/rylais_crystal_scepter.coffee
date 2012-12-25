@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Rylai's Crystal Scepter",
   code: 3116
 

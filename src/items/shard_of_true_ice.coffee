@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Shard of True Ice",
   code: 3092
 

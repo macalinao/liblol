@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Shurelya's Reverie",
   code: 3069
 

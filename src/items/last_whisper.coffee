@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Last Whisper",
   code: 3035
 

@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Eleisa's Miracle",
   code: 3173
 

@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Blasting Wand",
   code: 1026
 

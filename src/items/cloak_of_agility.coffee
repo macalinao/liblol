@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Cloak of Agility",
   code: 1018
 

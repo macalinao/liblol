@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Brawler's Gloves",
   code: 1051
 

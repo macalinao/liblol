@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Banner of Command",
   code: 3060
 

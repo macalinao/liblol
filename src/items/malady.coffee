@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Malady",
   code: 3114
 

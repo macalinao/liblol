@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Sapphire Crystal",
   code: 1027
 

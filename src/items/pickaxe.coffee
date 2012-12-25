@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Pickaxe",
   code: 1037
 

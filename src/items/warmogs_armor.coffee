@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Warmog's Armor",
   code: 3080
 

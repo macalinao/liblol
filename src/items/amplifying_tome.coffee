@@ -1,4 +1,4 @@
-#<< item
+#<< items
 lol.items._def "Amplifying Tome",
   code: 1052
 
