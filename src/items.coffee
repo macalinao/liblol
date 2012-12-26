@@ -51,33 +51,43 @@ class LoLItem
       cost += r.getTotalCost()
     return cost
 
+  toString: -> @name
+
 ##
-# Get all items that affect the given stats.
-#
-lol.items.getAllByStats = (statNames) ->
+# Finds all items that fulfill a condition and sorts them by the given comparator.
+# 
+lol.items.find = (condition, comparator) ->
+  unless condition? and typeof condition is "function"
+    condition = (item) -> true
+
   ret = []
-  for item in lol.items.list
-    stats = lol.stats.combine [item] # Combine to get final stats in case of passives/auras
-    ret.push item if lol.stats.hasStats(stats, statNames)
-  return ret
-
-##
-# Sorts all items by the given comparator.
-#
-lol.items.sortItems = (comparator) ->
-  list = []
   for itemName, item of lol.items.list
-    list.push item
-  list.sort comparator
-  return list
+    ret.push item if condition item
+
+  return ret unless comparator? and typeof comparator is "function"
+  return ret.sort comparator
 
 ##
-# Makes a comparator to sort by a given property.
+# Item conditions for use in find().
 #
-lol.items.byProperty = (property, asc = true) ->
-  (a, b) -> 
-    if asc then (a[property] || 0) - (b[property] || 0)
-    else (b[property] || 0) - (a[property] || 0)
+lol.items.conditions =
+  ##
+  # Checks if the item has the given stats set.
+  #
+  withStats: (statNames) ->
+    (item) -> lol.stats.hasStats lol.stats.combine([item]), statNames
+
+##
+# Item comparators for use in find().
+#
+lol.items.comparators =
+  ##
+  # Compares by property.
+  #
+  byProperty: (property, asc = true) ->
+    (a, b) -> 
+      if asc then (a[property] || 0) - (b[property] || 0)
+      else (b[property] || 0) - (a[property] || 0)
 
 ##
 # Defines a new item.

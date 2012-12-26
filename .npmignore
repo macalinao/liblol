@@ -20,8 +20,9 @@ nbproject
 Thumbs.db
 
 # Extra build files
-build/toaster/
+build/index.html
 build/liblol-debug.js
+build/toaster/
 
 # NPM packages folder.
 node_modules/

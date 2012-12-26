@@ -19,5 +19,9 @@
 nbproject
 Thumbs.db
 
-build/
+# Build files
+build/liblol.js
+build/liblol-debug.js
+build/toaster/
+
 node_modules/

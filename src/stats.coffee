@@ -58,8 +58,8 @@ lol.stats =
       # Check auras
       if el.auras
         for aura in el.auras
-          unless isDuplicateEffect auras, el.aura
-            auras.push el.aura
+          unless isDuplicateEffect auras, aura
+            auras.push aura
 
       # Check passives
       if el.passives

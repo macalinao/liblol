@@ -19,7 +19,7 @@ lol.itemEffects = (->
   awe: ->
     makeEffect "Awe",
       desc: "Gain attack damage equal to 2% of your maximum mana."
-      applyToStats: (stats) -> ad: mana * 0.02
+      applyToStats: (stats) -> ad: stats.mana * 0.02
 
   cleave: ->
     makeEffect "Cleave",
