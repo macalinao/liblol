@@ -57,8 +57,11 @@ class LoLItem
 # Finds all items that fulfill a condition and sorts them by the given comparator.
 # 
 lol.items.find = (condition, comparator) ->
-  unless condition? and typeof condition is "function"
+  unless condition?
     condition = (item) -> true
+  
+  unless typeof condition is "function"
+    throw new Error "Condition is not a function!"
 
   ret = []
   for itemName, item of lol.items.list
