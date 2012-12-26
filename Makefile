@@ -11,4 +11,4 @@ test:
 		--reporter $(REPORTER) \
 		test/*.coffee
 
-.PHONY: test
+.PHONY: build server test
