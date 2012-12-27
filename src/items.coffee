@@ -54,18 +54,18 @@ class LoLItem
   toString: -> @name
 
 ##
-# Finds all items that fulfill a condition and sorts them by the given comparator.
+# Finds all items that fulfill a filter and sorts them by the given comparator.
 # 
-lol.items.find = (condition, comparator) ->
-  unless condition?
-    condition = (item) -> true
+lol.items.find = (filter, comparator) ->
+  unless filter?
+    filter = (item) -> true
   
-  unless typeof condition is "function"
-    throw new Error "Condition is not a function!"
+  unless typeof filter is "function"
+    throw new Error "Filter is not a function!"
 
   ret = []
   for itemName, item of lol.items.list
-    ret.push item if condition item
+    ret.push item if filter item
 
   return ret unless comparator?
 
@@ -75,9 +75,9 @@ lol.items.find = (condition, comparator) ->
   return ret.sort comparator
 
 ##
-# Item conditions for use in find().
+# Item filters for use in find().
 #
-lol.items.conditions =
+lol.items.filters =
   ##
   # Checks if the item has the given stats set.
   #

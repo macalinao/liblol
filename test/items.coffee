@@ -7,13 +7,13 @@ describe "items", ->
     it "should return all items when nothing is passed to it", ->
       items.find().should.include item for item in items.list
 
-    it "should throw an error if the condition isn't a function", ->
+    it "should throw an error if the filter isn't a function", ->
       try
         items.find "blah"
       catch e
-        e.message.should.equal "Condition is not a function!"
+        e.message.should.equal "Filter is not a function!"
 
-    it "should return a blank array if the condition is never true", ->
+    it "should return a blank array if the filter is never true", ->
       items.find(-> false).should.eql []
 
     it "should throw an error if the comparator isn't a function", ->
@@ -27,4 +27,5 @@ describe "items", ->
       filter = (item) -> item.name.substring(0, 1) is "A"
       comparator = (a, b) -> a.ap - b.ap
 
+      # Ensure the sort is the same as the Array.sort
       items.find(filter).sort(comparator).should.eql items.find filter, comparator
