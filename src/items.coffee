@@ -93,8 +93,13 @@ lol.items.comparators =
   #
   byProperty: (property, asc = true) ->
     (a, b) -> 
-      if asc then (a[property] || 0) - (b[property] || 0)
-      else (b[property] || 0) - (a[property] || 0)
+      pa = a[property] || 0
+      pb = b[property] || 0
+
+      unless typeof pa is "number" and typeof pb is "number"
+        throw new Error "The property must be a number."
+
+      if asc then pa - pb else pb - pa
 
 ##
 # Defines a new item.
