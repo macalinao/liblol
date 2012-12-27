@@ -29,3 +29,20 @@ describe "items", ->
 
       # Ensure the sort is the same as the Array.sort
       items.find(filter).sort(comparator).should.eql items.find filter, comparator
+
+    describe "filters", ->
+
+      describe "withStats", ->
+
+        it "should not include items without the stat", ->
+          items.find(items.filters.withStats(["ap"])).should.not.include items.list["B. F. Sword"]
+
+        it "should include items with the stat", ->
+          items.find(items.filters.withStats(["ap"])).should.include items.list["Needlessly Large Rod"]
+
+        it "should include items with multiple stats", ->
+          items.find(items.filters.withStats(["ap", "ad"])).should.include items.list["Hextech Gunblade"]
+
+        it "should include items with a stat in a passive", ->
+          items.find(items.filters.withStats(["hp5"])).should.include items.list["Warmog's Armor"]
+
