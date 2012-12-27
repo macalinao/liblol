@@ -7,8 +7,11 @@ describe "items", ->
     it "should return all items when nothing is passed to it", ->
       items.find().should.include item for item in items.list
 
-    it "should throw an error if the parameters are bad", ->
+    it "should throw an error if the condition isn't a function", ->
       try
         items.find "blah"
       catch e
         e.message.should.equal "Condition is not a function!"
+
+    it "should return a blank array if the condition is never true", ->
+      items.find(-> false).should.eql []
