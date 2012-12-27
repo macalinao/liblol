@@ -85,11 +85,11 @@ lol.items.filters =
     (item) -> lol.stats.hasStats lol.stats.combine([item]), statNames
 
 ##
-# Item comparators for use in find().
+# Item sorts (comparators) for use in find().
 #
-lol.items.comparators =
+lol.items.sorts =
   ##
-  # Compares by property.
+  # Sorts by property.
   #
   byProperty: (property, asc = true) ->
     (a, b) -> 

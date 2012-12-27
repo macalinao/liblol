@@ -46,12 +46,12 @@ describe "items", ->
         it "should include items with a stat in a passive", ->
           items.find(items.filters.withStats(["hp5"])).should.include items.list["Warmog's Armor"]
 
-    describe "comparators", ->
+    describe "sorts", ->
 
       describe "byProperty", ->
 
         it "should error if the property is not a number", ->
           try
-            items.find().sort items.comparators.byProperty("name")
+            items.find().sort items.sorts.byProperty("name")
           catch e
             e.message.should.equal "The property must be a number."
