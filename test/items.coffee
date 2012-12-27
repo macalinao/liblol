@@ -16,20 +16,6 @@ describe "items", ->
     it "should return a blank array if the filter is never true", ->
       items.find(-> false).should.eql []
 
-    it "should throw an error if the comparator isn't a function", ->
-      try
-        items.find (-> false), "not a func"
-      catch e
-        e.message.should.equal "Comparator is not a function!"
-
-    it "should sort if a comparator is given", ->
-      # Put a filter to not have a huge eql
-      filter = (item) -> item.name.substring(0, 1) is "A"
-      comparator = (a, b) -> a.ap - b.ap
-
-      # Ensure the sort is the same as the Array.sort
-      items.find(filter).sort(comparator).should.eql items.find filter, comparator
-
     describe "filters", ->
 
       describe "withStats", ->
@@ -46,20 +32,20 @@ describe "items", ->
         it "should include items with a stat in a passive", ->
           items.find(items.filters.withStats(["hp5"])).should.include items.list["Warmog's Armor"]
 
-    describe "sorts", ->
+  describe "sorts", ->
 
-      describe "byProperty", ->
+    describe "byProperty", ->
 
-        it "should error if the property is not a number", ->
-          try
-            items.find().sort items.sorts.byProperty("name")
-          catch e
-            e.message.should.equal "The property must be a number."
+      it "should error if the property is not a number", ->
+        try
+          items.find().sort items.sorts.byProperty("name")
+        catch e
+          e.message.should.equal "The property must be a number."
 
-        it "should sort ascending by default", ->
-          res = items.find items.filters.withStats(["ap"]), items.sorts.byProperty("ap")
-          (res[0].ap < res[res.length - 1].ap).should.be.true
+      it "should sort ascending by default", ->
+        res = items.find(items.filters.withStats(["ap"])).sort items.sorts.byProperty("ap")
+        (res[0].ap < res[res.length - 1].ap).should.be.true
 
-        it "should sort descending if needed", ->
-          res = items.find items.filters.withStats(["ap"]), items.sorts.byProperty("ap", no)
-          (res[0].ap > res[res.length - 1].ap).should.be.true
+      it "should sort descending if needed", ->
+        res = items.find(items.filters.withStats(["ap"])).sort items.sorts.byProperty("ap", no)
+        (res[0].ap > res[res.length - 1].ap).should.be.true
