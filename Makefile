@@ -1,5 +1,7 @@
 REPORTER = spec
 
+all: build test
+
 build:
 	toaster -cd
 
@@ -11,4 +13,4 @@ test:
 		--reporter $(REPORTER) \
 		test/*.coffee
 
-.PHONY: build server test
+.PHONY: all build server test
