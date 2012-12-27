@@ -15,3 +15,11 @@ describe "items", ->
 
     it "should return a blank array if the condition is never true", ->
       items.find(-> false).should.eql []
+
+    it "should throw an error if the comparator isn't a function", ->
+      try
+        items.find (-> false), "not a func"
+      catch e
+        e.message.should.equal "Comparator is not a function!"
+
+

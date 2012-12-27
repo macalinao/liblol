@@ -67,7 +67,11 @@ lol.items.find = (condition, comparator) ->
   for itemName, item of lol.items.list
     ret.push item if condition item
 
-  return ret unless comparator? and typeof comparator is "function"
+  return ret unless comparator?
+
+  unless typeof comparator is "function"
+    throw new Error "Comparator is not a function!"
+
   return ret.sort comparator
 
 ##
