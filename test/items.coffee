@@ -55,3 +55,11 @@ describe "items", ->
             items.find().sort items.sorts.byProperty("name")
           catch e
             e.message.should.equal "The property must be a number."
+
+        it "should sort ascending by default", ->
+          res = items.find items.filters.withStats(["ap"]), items.sorts.byProperty("ap")
+          (res[0].ap < res[res.length - 1].ap).should.be.true
+
+        it "should sort descending if needed", ->
+          res = items.find items.filters.withStats(["ap"]), items.sorts.byProperty("ap", no)
+          (res[0].ap > res[res.length - 1].ap).should.be.true
