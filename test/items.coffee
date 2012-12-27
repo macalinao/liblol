@@ -22,4 +22,9 @@ describe "items", ->
       catch e
         e.message.should.equal "Comparator is not a function!"
 
+    it "should sort if a comparator is given", ->
+      # Put a filter to not have a huge eql
+      filter = (item) -> item.name.substring(0, 1) is "A"
+      comparator = (a, b) -> a.ap - b.ap
 
+      items.find(filter).sort(comparator).should.eql items.find filter, comparator
