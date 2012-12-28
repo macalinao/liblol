@@ -105,6 +105,10 @@ lol.stats =
     if actives.length > 0
       finalStats.actives = actives
 
+    # Process stats
+    finalStats.as = 2.5 if finalStats.as > 2.5 # Attack speed cap
+    finalStats.critDmg += 200 # Default crit damage
+
     return finalStats
 
   ##
