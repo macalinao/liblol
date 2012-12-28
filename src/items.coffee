@@ -39,7 +39,7 @@ class LoLItem
   getRecipe: ->
     recipe = []
     for x in @recipe
-      recipe.push lol.items._list[x]
+      recipe.push lol.items.findOne[x]
     return recipe
 
   getTotalCost: ->
