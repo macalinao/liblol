@@ -28,9 +28,8 @@ class LoLItem
 
     setSources = (effects) -> e.source = this for e in effects
 
-    # Set source of all effects
-    setSources @auras if @auras
-    setSources @passives if @passives
+    # Set sources of all effects
+    [@auras, @passives].map (el) -> setSources el if el
     @active.source = this if @active
 
     # Calculate stats
