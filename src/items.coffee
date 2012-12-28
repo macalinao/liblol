@@ -3,7 +3,7 @@
 #<< item_effects
 
 lol.items = {}
-lol.items.list = {}
+lol.items._list = {}
 
 ##
 # Represents an item in LoL.
@@ -36,7 +36,7 @@ class LoLItem
   getRecipe: ->
     recipe = []
     for x in @recipe
-      recipe.push lol.items.list[x]
+      recipe.push lol.items._list[x]
     return recipe
 
   getTotalCost: ->
@@ -65,7 +65,7 @@ lol.items.find = (filter) ->
 
   else if type is "function"
     ret = []
-    for itemName, item of lol.items.list
+    for itemName, item of lol.items._list
       ret.push item if filter item
 
     return ret
@@ -160,5 +160,5 @@ lol.items.sorts =
 # Defines a new item.
 # 
 lol.items._def = (name, item) ->
-  lol.items.list[name] = new LoLItem name, item
+  lol.items._list[name] = new LoLItem name, item
 
