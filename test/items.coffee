@@ -7,11 +7,17 @@ describe "items", ->
     it "should return all items when nothing is passed to it", ->
       items.find().should.include item for item in items.list
 
-    it "should throw an error if the filter isn't a function", ->
+    it "should get the item by name if a string is passed", ->
+      items.find("Hextech Gunblade").should.eql [items.list["Hextech Gunblade"]]
+
+    it "should use the 'where' filter if an object is passed", ->
+      items.find(name: "Hextech Gunblade").should.eql [items.list["Hextech Gunblade"]]
+
+    it "should throw an error if the filter isn't a string, object, or function", ->
       try
-        items.find "blah"
+        items.find 3.14
       catch e
-        e.message.should.equal "Filter is not a function!"
+        e.message.should.equal "Invalid arguments for find!"
 
     it "should return a blank array if the filter is never true", ->
       items.find(-> false).should.eql []

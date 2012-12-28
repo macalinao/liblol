@@ -54,15 +54,23 @@ class LoLItem
 lol.items.find = (filter) ->
   unless filter?
     filter = (item) -> true # Filterless filter
-  
-  unless typeof filter is "function"
-    throw new Error "Filter is not a function!"
 
-  ret = []
-  for itemName, item of lol.items.list
-    ret.push item if filter item
+  type = typeof filter
 
-  return ret
+  if type is "string"
+    return lol.items.find name: filter
+
+  else if type is "object"
+    return lol.items.find lol.items.filters.where filter
+
+  else if type is "function"
+    ret = []
+    for itemName, item of lol.items.list
+      ret.push item if filter item
+
+    return ret
+  else
+      throw new Error "Invalid arguments for find!"
 
 ##
 # Item filters for use in find().
