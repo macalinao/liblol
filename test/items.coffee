@@ -18,6 +18,15 @@ describe "items", ->
 
     describe "filters", ->
 
+      describe "not", ->
+
+        it "should include nothing if the filter includes everything", ->
+          items.find(items.filters.not -> true).should.eql []
+
+        it "should include nothing with ap if the filter includes everything with ap", ->
+          list = items.find(items.filters.not items.filters.withStats(["ap"]))
+          item.ap.should.equal 0 for item in list
+
       describe "withStats", ->
 
         it "should not include items without the stat", ->

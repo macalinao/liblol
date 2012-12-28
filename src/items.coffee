@@ -53,7 +53,7 @@ class LoLItem
 # 
 lol.items.find = (filter) ->
   unless filter?
-    filter = (item) -> true
+    filter = (item) -> true # Filterless filter
   
   unless typeof filter is "function"
     throw new Error "Filter is not a function!"
@@ -68,6 +68,11 @@ lol.items.find = (filter) ->
 # Item filters for use in find().
 #
 lol.items.filters =
+  ##
+  # Negates a filter.
+  #
+  not: (filter) -> (item) -> not filter item
+
   ##
   # Checks if the item has the given stats set.
   #
