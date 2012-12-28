@@ -79,6 +79,16 @@ lol.items.filters =
       return true
 
   ##
+  # Combines all filters in the arguments, returning true if one or more filters are true.
+  #
+  or: -> 
+    args = arguments
+    (item) ->
+      for filter in args
+        return true if typeof filter is "function" and filter(item) is true
+      return false
+
+  ##
   # Negates a filter.
   #
   not: (filter) -> (item) -> not filter item

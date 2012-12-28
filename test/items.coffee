@@ -30,6 +30,19 @@ describe "items", ->
           list.should.not.include items.list["Hextech Revolver"] # ap
           list.should.not.include items.list["Bilgewater Cutlass"] # ad
 
+      describe "or", ->
+
+        it "should include all cases if one filter has all results", ->
+          items.find(items.filters.or (-> false), (-> true)).length.should.equal items.find().length
+
+        it "should include cases that fulfill any filters", ->
+          list = items.find(items.filters.or items.filters.withStats(["ap"]), items.filters.withStats(["ad"]))
+
+          list.should.include items.list["Hextech Gunblade"] # ap and ad
+          list.should.include items.list["Hextech Revolver"] # ap
+          list.should.include items.list["Bilgewater Cutlass"] # ad
+          list.should.not.include items.list["Warmog's Armor"] # ad
+
       describe "not", ->
 
         it "should include nothing if the filter includes everything", ->
