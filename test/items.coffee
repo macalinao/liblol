@@ -7,8 +7,8 @@ describe "items", ->
   withStats = items.filters.withStats
   OR = items.filters.or
   AND = items.filters.and
+  where = items.filters.where
   byProperty = items.sorts.byProperty
-
 
   hextechGunblade = items._list["Hextech Gunblade"]
 
@@ -69,8 +69,6 @@ describe "items", ->
           item.ap.should.equal 0 for item in list
 
       describe "where", ->
-        where = items.filters.where
-
         it "should check for equality if the parameter isn't a query object", ->
           find(where name: "Hextech Gunblade").should.eql [hextechGunblade]
 
