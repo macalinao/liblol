@@ -73,6 +73,13 @@ lol.items.find = (filter) ->
       throw new Error "Invalid arguments for find!"
 
 ##
+# Finds the first item that fulfills a filter.
+#
+lol.items.findOne = (filter) ->
+  res = lol.items.find filter
+  if res.length is 0 then null else res[0]
+
+##
 # Item filters for use in find().
 #
 lol.items.filters =

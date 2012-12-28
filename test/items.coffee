@@ -101,6 +101,14 @@ describe "items", ->
         it "should include items with a stat in a passive", ->
           items.find(items.filters.withStats(["hp5"])).should.include items._list["Warmog's Armor"]
 
+  describe "findOne", ->
+
+    it "should find the first item and return it", ->
+      items.findOne("Hextech Gunblade").should.equal items._list["Hextech Gunblade"]
+
+    it "should return null if no item was found", ->
+      true.should.equal items.findOne("Needlessly Small Rod") is null
+
   describe "sorts", ->
 
     describe "byProperty", ->
