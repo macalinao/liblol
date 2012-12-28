@@ -33,6 +33,9 @@ class LoLItem
     setSources @passives if @passives
     @active.source = this if @active
 
+    # Calculate stats
+    @stats = lol.stats.combine [this]
+
   getRecipe: ->
     recipe = []
     for x in @recipe
@@ -144,7 +147,7 @@ lol.items.filters =
   # Checks if the item has the given stats set.
   #
   withStats: (statNames) ->
-    (item) -> lol.stats.hasStats lol.stats.combine([item]), statNames
+    (item) -> lol.stats.hasStats item.stats, statNames
 
 ##
 # Item sorts (comparators) for use in find().

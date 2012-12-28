@@ -7,6 +7,7 @@ describe "items", ->
   withStats = items.filters.withStats
   OR = items.filters.or
   AND = items.filters.and
+  NOT = items.filters.not
   where = items.filters.where
   byProperty = items.sorts.byProperty
 
@@ -62,10 +63,10 @@ describe "items", ->
       describe "not", ->
 
         it "should include nothing if the filter includes everything", ->
-          find(items.filters.not -> true).should.eql []
+          find(NOT -> true).should.eql []
 
         it "should include nothing with ap if the filter includes everything with ap", ->
-          list = find(items.filters.not withStats(["ap"]))
+          list = find(NOT withStats(["ap"]))
           item.ap.should.equal 0 for item in list
 
       describe "where", ->
