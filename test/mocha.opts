@@ -1,4 +1,4 @@
---require should
+--require ./test/bootstrap/
 --reporter spec
 --ui bdd
 --compilers coffee:coffee-script
