@@ -18,6 +18,18 @@ describe "items", ->
 
     describe "filters", ->
 
+      describe "and", ->
+
+        it "should include no cases if one filter has no results", ->
+          items.find(items.filters.and (-> false), (-> true)).should.eql []
+
+        it "should include only cases that fulfill both filters", ->
+          list = items.find(items.filters.and items.filters.withStats(["ap"]), items.filters.withStats(["ad"]))
+
+          list.should.include items.list["Hextech Gunblade"] # ap and ad
+          list.should.not.include items.list["Hextech Revolver"] # ap
+          list.should.not.include items.list["Bilgewater Cutlass"] # ad
+
       describe "not", ->
 
         it "should include nothing if the filter includes everything", ->
