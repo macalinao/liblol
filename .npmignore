@@ -26,3 +26,8 @@ build/toaster/
 
 # NPM packages folder.
 node_modules/
+
+# Travis and Git
+.git*
+.git/
+.travis.yml
