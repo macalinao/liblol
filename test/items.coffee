@@ -77,6 +77,10 @@ describe "items", ->
           items.find(where name: "Hextech Gunblade", ap: lt: 66).should.eql [items.list["Hextech Gunblade"]]
           items.find(where name: "Hextech Gunblade", ap: lt: 65).should.eql []
 
+        it "should work with multiple query filters applied at once", ->
+          items.find(where name: "Hextech Gunblade", ap: lt: 66, gt: 54).should.eql [items.list["Hextech Gunblade"]]
+          items.find(where name: "Hextech Gunblade", ap: lt: 69, gt: 65).should.eql []
+
       describe "withStats", ->
 
         it "should not include items without the stat", ->
