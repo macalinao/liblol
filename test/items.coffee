@@ -41,7 +41,7 @@ describe "items", ->
           list.should.include items.list["Hextech Gunblade"] # ap and ad
           list.should.include items.list["Hextech Revolver"] # ap
           list.should.include items.list["Bilgewater Cutlass"] # ad
-          list.should.not.include items.list["Warmog's Armor"] # ad
+          list.should.not.include items.list["Warmog's Armor"] # none
 
       describe "not", ->
 
