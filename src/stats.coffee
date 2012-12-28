@@ -79,12 +79,10 @@ lol.stats =
     if auras.length > 0 or passives.length > 0
       # Apply all of the stats
       effectsStats = []
-      for aura in auras
-        if aura.applyToStats
-          effectsStats.push aura.applyToStats initialStats
-      for passive in passives
-        if passive.applyToStats
-          effectsStats.push passive.applyToStats initialStats
+
+      [auras, passives].map (effects) ->
+        for e in effects
+          effectsStats.push e.applyToStats initialStats if e.applyToStats
 
       # Combine all of the effects together
       effectStats = lol.stats.combine effectsStats
