@@ -52,6 +52,31 @@ describe "items", ->
           list = items.find(items.filters.not items.filters.withStats(["ap"]))
           item.ap.should.equal 0 for item in list
 
+      describe "where", ->
+        where = items.filters.where
+
+        it "should check for equality if the parameter isn't a query object", ->
+          items.find(where name: "Hextech Gunblade").should.eql [items.list["Hextech Gunblade"]]
+
+        it "should check for equality with the 'eq' filter", ->
+          items.find(where name: eq: "Hextech Gunblade").should.eql [items.list["Hextech Gunblade"]]
+
+        it "should check for >= with the 'gte' filter", ->
+          items.find(where name: "Hextech Gunblade", ap: gte: 65).should.eql [items.list["Hextech Gunblade"]]
+          items.find(where name: "Hextech Gunblade", ap: gte: 66).should.eql []
+
+        it "should check for > with the 'gt' filter", ->
+          items.find(where name: "Hextech Gunblade", ap: gt: 64).should.eql [items.list["Hextech Gunblade"]]
+          items.find(where name: "Hextech Gunblade", ap: gt: 65).should.eql []
+
+        it "should check for <= with the 'lte' filter", ->
+          items.find(where name: "Hextech Gunblade", ap: lte: 65).should.eql [items.list["Hextech Gunblade"]]
+          items.find(where name: "Hextech Gunblade", ap: lte: 64).should.eql []
+
+        it "should check for < with the 'lt' filter", ->
+          items.find(where name: "Hextech Gunblade", ap: lt: 66).should.eql [items.list["Hextech Gunblade"]]
+          items.find(where name: "Hextech Gunblade", ap: lt: 65).should.eql []
+
       describe "withStats", ->
 
         it "should not include items without the stat", ->

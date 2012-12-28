@@ -94,6 +94,38 @@ lol.items.filters =
   not: (filter) -> (item) -> not filter item
 
   ##
+  # Where -- complex filter that takes in a query object.
+  #
+  where: (params) ->
+    (item) ->
+      for paramName, param of params
+        # Handle passives, active, and auras
+        if ["passives", "active", "auras"].indexOf(paramName) isnt -1
+          return false # TODO
+
+        # Check for equality
+        if typeof param isnt "object"
+          return false if item[paramName] isnt param
+
+        # It's a query!
+        if param.eq
+          return false unless item[paramName] is param.eq
+
+        if param.gte
+          return false if typeof param.gte isnt "number" or not (item[paramName] >= param.gte)
+
+        if param.gt
+          return false if typeof param.gt isnt "number" or not (item[paramName] > param.gt)
+
+        if param.lte
+          return false if typeof param.lte isnt "number" or not (item[paramName] <= param.lte)
+
+        if param.lt
+          return false if typeof param.lt isnt "number" or not (item[paramName] < param.lt)
+
+      return true
+
+  ##
   # Checks if the item has the given stats set.
   #
   withStats: (statNames) ->
