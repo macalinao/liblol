@@ -125,20 +125,15 @@ lol.items.filters =
           return false if item[paramName] isnt param
 
         # It's a query!
-        if param.eq
-          return false unless item[paramName] is param.eq
+        for handlerName, handler of lol.items._queryHandlers
+          if param[handlerName]
+            # Check if the handler is of the right type
+            if handler.types
+              for type in handler.types
+                return false if typeof param[handlerName] isnt type
 
-        if param.gte
-          return false if typeof param.gte isnt "number" or not (item[paramName] >= param.gte)
-
-        if param.gt
-          return false if typeof param.gt isnt "number" or not (item[paramName] > param.gt)
-
-        if param.lte
-          return false if typeof param.lte isnt "number" or not (item[paramName] <= param.lte)
-
-        if param.lt
-          return false if typeof param.lt isnt "number" or not (item[paramName] < param.lt)
+            # Does not match filter unless the handler is triggered correctly
+            return false unless handler.handler item[paramName], param[handlerName]
 
       return true
 
@@ -164,6 +159,29 @@ lol.items.sorts =
         throw new Error "The property must be a number."
 
       if asc then pa - pb else pb - pa
+
+lol.items._queryHandlers =
+  eq:
+    handler: (property, val) -> property is val
+  
+  neq:
+    handler: (property, val) -> property isnt val
+
+  gte:
+    types: ["number"]
+    handler: (property, val) -> property >= val
+
+  gt:
+    types: ["number"]
+    handler: (property, val) -> property > val
+
+  lte:
+    types: ["number"]
+    handler: (property, val) -> property <= val
+
+  lt:
+    types: ["number"]
+    handler: (property, val) -> property < val
 
 ##
 # Defines a new item.
