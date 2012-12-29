@@ -115,46 +115,46 @@ lol.items.filters =
   #
   where: (params) ->
     (item) ->
-      for paramName, param of params
+      for property, matcher of params
         # Handle passives, active, and auras
-        if ["passives", "active", "auras"].indexOf(paramName) isnt -1
+        if ["passives", "active", "auras"].indexOf(property) isnt -1
           return false # TODO
 
         # Check for matching a function
-        if typeof param is "function"
-          return false unless param item[paramName]
+        if typeof matcher is "function"
+          return false unless matcher item[property]
 
         # Check for equality
-        else if typeof param isnt "object"
-          return false if item[paramName] isnt param
+        else if typeof matcher isnt "object"
+          return false if item[property] isnt matcher
 
         # It's a query!
         for handlerName, handler of lol.items._queryHandlers
-          if param[handlerName]
+          if matcher[handlerName]
             # Check if the property is of the right type
             if handler.propTypes
               prop = false
               for type in handler.propTypes
-                if typeof item[paramName] is type
+                if typeof item[property] is type
                   prop = true
                   break
               
               unless prop
-                throw new Error "Invalid type for property '#{item[paramName]}'! Available types are: #{handler.propTypes.join(", ")}"
+                throw new Error "Invalid type for property '#{item[property]}'! Available types are: #{handler.propTypes.join(", ")}"
 
             # Check if the handler is of the right type
             if handler.valTypes
               val = false
               for type in handler.valTypes
-                if typeof param[handlerName] is type
+                if typeof matcher[handlerName] is type
                   val = true
                   break
 
               unless val
-                throw new Error "Invalid type for filter value '#{param[handlerName]}'! Available types are: #{handler.valTypes.join(", ")}"
+                throw new Error "Invalid type for filter value '#{matcher[handlerName]}'! Available types are: #{handler.valTypes.join(", ")}"
 
             # Does not match filter unless the handler is triggered correctly
-            return false unless handler.handler item[paramName], param[handlerName]
+            return false unless handler.handler item[property], matcher[handlerName]
 
       return true
 
