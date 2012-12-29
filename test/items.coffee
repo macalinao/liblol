@@ -70,6 +70,9 @@ describe "items", ->
           item.ap.should.equal 0 for item in list
 
       describe "where", ->
+        it "should check using a provided function if the parameter is a function", ->
+          find(where name: "Hextech Gunblade", ap: (val) -> 65).should.eql [hextechGunblade]
+
         it "should check for equality if the parameter isn't a query object", ->
           find(where name: "Hextech Gunblade").should.eql [hextechGunblade]
 
@@ -101,8 +104,9 @@ describe "items", ->
           find(where name: "Hextech Gunblade", ap: lt: 66).should.eql [hextechGunblade]
           find(where name: "Hextech Gunblade", ap: lt: 65).should.eql []
 
-        it "should work with custom filters with 'matches'", ->
-          find(where name: "Hextech Gunblade", ap: matches: (val) -> 65).should.eql [hextechGunblade]
+        it "should check regex with the 'matches' filter", ->
+          find(where name: eq: "Hextech Gunblade", matches: /exte[c|z]h/).should.eql [hextechGunblade]
+          find(where name: eq: "Hextech Gunblade", matches: /exte[s|z]h/).should.eql []
 
         it "should work with multiple query filters applied at once", ->
           find(where name: "Hextech Gunblade", ap: lt: 66, gt: 54).should.eql [hextechGunblade]

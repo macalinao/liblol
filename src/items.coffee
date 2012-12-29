@@ -120,8 +120,12 @@ lol.items.filters =
         if ["passives", "active", "auras"].indexOf(paramName) isnt -1
           return false # TODO
 
+        # Check for matching a function
+        if typeof param is "function"
+          return false unless param item[paramName]
+
         # Check for equality
-        if typeof param isnt "object"
+        else if typeof param isnt "object"
           return false if item[paramName] isnt param
 
         # It's a query!
@@ -185,8 +189,10 @@ lol.items._queryHandlers =
     handler: (property, val) -> property < val
 
   matches:
-    types: ["function"]
-    handler: (property, val) -> val property
+    types: ["object"]
+    handler: (property, val) ->
+      throw new Error "Argument must be a regular expression!" unless val instanceof RegExp
+      val.test property
 
 ##
 # Defines a new item.
