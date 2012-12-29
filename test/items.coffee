@@ -1,4 +1,4 @@
-items = require("../build/liblol.js").items
+{stats, items, itemEffects} = require("../build/liblol")
 
 describe "items", ->
   find = items.find
@@ -12,6 +12,45 @@ describe "items", ->
   byProperty = items.sorts.byProperty
 
   hextechGunblade = items._list["Hextech Gunblade"]
+
+  describe "LoLItem", ->
+
+    describe "constructor", ->
+      testItem = null
+
+      beforeEach ->
+        testItem = new items.LoLItem "Hecate II",
+          ad: 400
+          as: 50
+
+          passives: [
+            itemEffects.cleave()
+          ]
+
+          active:
+            desc: "Destroys any target on the map."
+            range: 9001
+
+          auras: [
+            desc: "Lowers the armor penetration of all surrounding enemies by 20%."
+          ]
+
+      it "should inherit the stats passed to it", ->
+        testItem.ad.should.equal 400
+        testItem.as.should.equal 50
+
+      it "should zero all other stats that it doesn't include", ->
+        for name of stats.names
+          testItem[name].should.equal 0 if ["ad", "as"].indexOf(name) is -1
+
+      it "should set the sources of passives to the item", ->
+        passive.source.should.equal testItem for passive in testItem.passives
+
+      it "should set the source of active to the item", ->
+        testItem.active.source.should.equal testItem
+
+      it "should set the sources of auras to the item", ->
+        aura.source.should.equal testItem for aura in testItem.auras
 
   describe "find", ->
 

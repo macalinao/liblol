@@ -8,7 +8,7 @@ lol.items._list = {}
 ##
 # Represents an item in LoL.
 # 
-class LoLItem
+class lol.items.LoLItem
   constructor: (name, params) ->
     @name = name
 
@@ -224,5 +224,5 @@ lol.items._queryHandlers =
 # Defines a new item.
 # 
 lol.items._def = (name, item) ->
-  lol.items._list[name] = new LoLItem name, item
+  lol.items._list[name] = new lol.items.LoLItem name, item
 
