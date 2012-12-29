@@ -27,8 +27,8 @@ describe "items", ->
     it "should throw an error if the filter isn't a string, object, or function", ->
       try
         find 3.14
+        chai.assert.fail(0, 0, "Invalid value didn't error!")
       catch e
-        e.message.should.equal "Invalid arguments for find!"
 
     it "should return a blank array if the filter is never true", ->
       find(-> false).should.eql []
@@ -137,8 +137,8 @@ describe "items", ->
       it "should error if the property is not a number", ->
         try
           find().sort byProperty("name")
+          chai.assert.fail(0, 0, "Invalid value didn't error!")
         catch e
-          e.message.should.equal "The property must be a number."
 
       it "should sort ascending by default", ->
         res = find(withStats(["ap"])).sort byProperty("ap")
