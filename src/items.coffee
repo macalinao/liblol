@@ -130,7 +130,8 @@ lol.items.filters =
             # Check if the handler is of the right type
             if handler.types
               for type in handler.types
-                return false if typeof param[handlerName] isnt type
+                if typeof param[handlerName] isnt type
+                  throw new Error "Invalid type for filter value '#{param[handlerName]}'! Available types are: #{handler.types.join(", ")}"
 
             # Does not match filter unless the handler is triggered correctly
             return false unless handler.handler item[paramName], param[handlerName]
