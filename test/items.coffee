@@ -76,10 +76,16 @@ describe "items", ->
         it "should check for equality if the parameter isn't a query object", ->
           find(where name: "Hextech Gunblade").should.eql [hextechGunblade]
 
-        it "should error if the value passed to the filter is invalid", ->
+        it "should error if the value passed to the handler is invalid", ->
           try
             find(where name: gte: "Hextech Gunblade")
-            chai.assert.fail(0, 0, "Invalid value didn't error!")
+            chai.assert.fail(0, 0, "Invalid property type didn't error!")
+          catch e
+
+        it "should error if the argument passed to the handler is invalid", ->
+          try
+            find(where ap: gte: "Hextech Gunblade")
+            chai.assert.fail(0, 0, "Invalid argument didn't error!")
           catch e
 
         it "should check for equality with the 'eq' filter", ->

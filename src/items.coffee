@@ -142,7 +142,7 @@ lol.items.filters =
               unless prop
                 throw new Error "Invalid type for property '#{item[property]}'! Available types are: #{handler.propTypes.join(", ")}"
 
-            # Check if the handler is of the right type
+            # Check if the handler argument is of the right type for the handler
             if handler.valTypes
               val = false
               for type in handler.valTypes
@@ -151,7 +151,7 @@ lol.items.filters =
                   break
 
               unless val
-                throw new Error "Invalid type for filter value '#{matcher[handlerName]}'! Available types are: #{handler.valTypes.join(", ")}"
+                throw new Error "Invalid type for handler argument '#{matcher[handlerName]}'! Available types are: #{handler.valTypes.join(", ")}"
 
             # Does not match filter unless the handler is triggered correctly
             return false unless handler.handler item[property], matcher[handlerName]
