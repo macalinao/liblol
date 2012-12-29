@@ -108,6 +108,17 @@ describe "items", ->
           find(where name: eq: "Hextech Gunblade", matches: /exte[c|z]h/).should.eql [hextechGunblade]
           find(where name: eq: "Hextech Gunblade", matches: /exte[s|z]h/).should.eql []
 
+        it "should error if the 'matches' filter is given something other than a regex", ->
+          try
+            find(where name: eq: "Hextech Gunblade", matches: {})
+            chai.assert.fail 0, 0, "Invalid value didn't error!"
+          catch e
+
+          try
+            find(where name: eq: "Hextech Gunblade", matches: 3.14)
+            chai.assert.fail 0, 0, "Invalid value didn't error!"
+          catch e
+
         it "should work with multiple query filters applied at once", ->
           find(where name: "Hextech Gunblade", ap: lt: 66, gt: 54).should.eql [hextechGunblade]
           find(where name: "Hextech Gunblade", ap: lt: 69, gt: 65).should.eql []
