@@ -76,6 +76,10 @@ describe "items", ->
         it "should check for equality with the 'eq' filter", ->
           find(where name: eq: "Hextech Gunblade").should.eql [hextechGunblade]
 
+
+        it "should check for non-equality with the 'neq' filter", ->
+          find(where name: neq: "Hextech Gunblade").should.not.include [hextechGunblade]
+
         it "should check for >= with the 'gte' filter", ->
           find(where name: "Hextech Gunblade", ap: gte: 65).should.eql [hextechGunblade]
           find(where name: "Hextech Gunblade", ap: gte: 66).should.eql []
