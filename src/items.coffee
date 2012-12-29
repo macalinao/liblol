@@ -26,7 +26,7 @@ class LoLItem
     @passives = params.passives
     @active = params.active
 
-    setSources = (effects) -> e.source = this for e in effects
+    setSources = (effects) => e.source = this for e in effects
 
     # Set sources of all effects
     [@auras, @passives].map (el) -> setSources el if el
