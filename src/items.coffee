@@ -133,15 +133,25 @@ lol.items.filters =
           if param[handlerName]
             # Check if the property is of the right type
             if handler.propTypes
+              prop = false
               for type in handler.propTypes
-                if typeof item[paramName] isnt type
-                  throw new Error "Invalid type for filter value '#{item[paramName]}'! Available types are: #{handler.propTypes.join(", ")}"
+                if typeof item[paramName] is type
+                  prop = true
+                  break
+              
+              unless prop
+                throw new Error "Invalid type for property '#{item[paramName]}'! Available types are: #{handler.propTypes.join(", ")}"
 
             # Check if the handler is of the right type
             if handler.valTypes
+              val = false
               for type in handler.valTypes
-                if typeof param[handlerName] isnt type
-                  throw new Error "Invalid type for filter value '#{param[handlerName]}'! Available types are: #{handler.valTypes.join(", ")}"
+                if typeof param[handlerName] is type
+                  val = true
+                  break
+
+              unless val
+                throw new Error "Invalid type for filter value '#{param[handlerName]}'! Available types are: #{handler.valTypes.join(", ")}"
 
             # Does not match filter unless the handler is triggered correctly
             return false unless handler.handler item[paramName], param[handlerName]
@@ -201,7 +211,7 @@ lol.items._queryHandlers =
   contains:
     propTypes: ["string"]
     valTypes: ["string", "number"]
-    handler: (property, val) -> string.contains val.toString()
+    handler: (property, val) -> property.search(val.toString()) isnt -1
 
   matches:
     propTypes: ["string"]

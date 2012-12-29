@@ -104,6 +104,11 @@ describe "items", ->
           find(where name: "Hextech Gunblade", ap: lt: 66).should.eql [hextechGunblade]
           find(where name: "Hextech Gunblade", ap: lt: 65).should.eql []
 
+        it "should check for string containing with the 'contains' filter", ->
+          find(where name: eq: "Hextech Gunblade", contains: "extech").should.eql [hextechGunblade]
+          find(where name: eq: "Hextech Gunblade", contains: 32).should.eql []
+          find(where name: eq: "Hextech Gunblade", contains: "extch ").should.eql []
+
         it "should check regex with the 'matches' filter", ->
           find(where name: eq: "Hextech Gunblade", matches: /exte[c|z]h/).should.eql [hextechGunblade]
           find(where name: eq: "Hextech Gunblade", matches: /exte[s|z]h/).should.eql []
