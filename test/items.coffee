@@ -76,7 +76,6 @@ describe "items", ->
         it "should check for equality with the 'eq' filter", ->
           find(where name: eq: "Hextech Gunblade").should.eql [hextechGunblade]
 
-
         it "should check for non-equality with the 'neq' filter", ->
           find(where name: neq: "Hextech Gunblade").should.not.include [hextechGunblade]
 
@@ -95,6 +94,9 @@ describe "items", ->
         it "should check for < with the 'lt' filter", ->
           find(where name: "Hextech Gunblade", ap: lt: 66).should.eql [hextechGunblade]
           find(where name: "Hextech Gunblade", ap: lt: 65).should.eql []
+
+        it "should work with custom filters with 'matches'", ->
+          find(where name: "Hextech Gunblade", ap: matches: (val) -> 65).should.eql [hextechGunblade]
 
         it "should work with multiple query filters applied at once", ->
           find(where name: "Hextech Gunblade", ap: lt: 66, gt: 54).should.eql [hextechGunblade]

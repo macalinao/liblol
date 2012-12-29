@@ -183,6 +183,10 @@ lol.items._queryHandlers =
     types: ["number"]
     handler: (property, val) -> property < val
 
+  matches:
+    types: ["function"]
+    handler: (property, val) -> val property
+
 ##
 # Defines a new item.
 # 
