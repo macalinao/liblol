@@ -14,26 +14,31 @@ describe "items", ->
   hextechGunblade = items._list["Hextech Gunblade"]
 
   describe "LoLItem", ->
+    testItem = new items.LoLItem "Hecate II",
+      ad: 400
+      as: 50
+
+      recipe: ["B. F. Sword", "The Black Cleaver"]
+
+      cost: 820
+      sell: 911
+
+      passives: [
+        itemEffects.cleave(),
+        {
+          desc: "Your attacks have an increased accuracy depending on your heartbeat."
+        }
+      ]
+
+      active:
+        desc: "Destroys any target on the map."
+        range: 9001
+
+      auras: [
+        desc: "Lowers the armor penetration of all surrounding enemies by 20%."
+      ]
 
     describe "constructor", ->
-      testItem = null
-
-      beforeEach ->
-        testItem = new items.LoLItem "Hecate II",
-          ad: 400
-          as: 50
-
-          passives: [
-            itemEffects.cleave()
-          ]
-
-          active:
-            desc: "Destroys any target on the map."
-            range: 9001
-
-          auras: [
-            desc: "Lowers the armor penetration of all surrounding enemies by 20%."
-          ]
 
       it "should inherit the stats passed to it", ->
         testItem.ad.should.equal 400
@@ -51,6 +56,20 @@ describe "items", ->
 
       it "should set the sources of auras to the item", ->
         aura.source.should.equal testItem for aura in testItem.auras
+
+    describe "getRecipe", ->
+
+      it "should get the objects of the items that are part of the recipe", ->
+        testItem.getRecipe().should.eql [findOne("B. F. Sword"), findOne("The Black Cleaver")]
+
+    describe "getTotalCost", ->
+
+      it "should add up the total costs of the items below it and the cost of the item", ->
+        testItem.getTotalCost().should.equal testItem.cost + findOne("B. F. Sword").getTotalCost() + findOne("The Black Cleaver").getTotalCost()
+
+      it "should use the item's cost if the item is a basic item (no recipe)", ->
+        longSword = findOne "Long Sword"
+        longSword.getTotalCost().should.equal longSword.cost
 
   describe "find", ->
 
