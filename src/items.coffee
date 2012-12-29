@@ -131,11 +131,17 @@ lol.items.filters =
         # It's a query!
         for handlerName, handler of lol.items._queryHandlers
           if param[handlerName]
+            # Check if the property is of the right type
+            if handler.propTypes
+              for type in handler.propTypes
+                if typeof item[paramName] isnt type
+                  throw new Error "Invalid type for filter value '#{item[paramName]}'! Available types are: #{handler.propTypes.join(", ")}"
+
             # Check if the handler is of the right type
-            if handler.types
-              for type in handler.types
+            if handler.valTypes
+              for type in handler.valTypes
                 if typeof param[handlerName] isnt type
-                  throw new Error "Invalid type for filter value '#{param[handlerName]}'! Available types are: #{handler.types.join(", ")}"
+                  throw new Error "Invalid type for filter value '#{param[handlerName]}'! Available types are: #{handler.valTypes.join(", ")}"
 
             # Does not match filter unless the handler is triggered correctly
             return false unless handler.handler item[paramName], param[handlerName]
@@ -173,23 +179,33 @@ lol.items._queryHandlers =
     handler: (property, val) -> property isnt val
 
   gte:
-    types: ["number"]
+    propTypes: ["number"]
+    valTypes: ["number"]
     handler: (property, val) -> property >= val
 
   gt:
-    types: ["number"]
+    propTypes: ["number"]
+    valTypes: ["number"]
     handler: (property, val) -> property > val
 
   lte:
-    types: ["number"]
+    propTypes: ["number"]
+    valTypes: ["number"]
     handler: (property, val) -> property <= val
 
   lt:
-    types: ["number"]
+    propTypes: ["number"]
+    valTypes: ["number"]
     handler: (property, val) -> property < val
 
+  contains:
+    propTypes: ["string"]
+    valTypes: ["string", "number"]
+    handler: (property, val) -> string.contains val.toString()
+
   matches:
-    types: ["object"]
+    propTypes: ["string"]
+    valTypes: ["object"]
     handler: (property, val) ->
       throw new Error "Argument must be a regular expression!" unless val instanceof RegExp
       val.test property
