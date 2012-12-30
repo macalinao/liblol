@@ -62,6 +62,17 @@ describe "items", ->
       it "should get the objects of the items that are part of the recipe", ->
         testItem.getRecipe().should.eql [findOne("B. F. Sword"), findOne("The Black Cleaver")]
 
+    describe "getBuildsInto", ->
+
+      it "should return nothing if the item builds into nothing", ->
+        hextechGunblade.getBuildsInto().should.be.empty
+
+      it "should return all of the items the item is a direct part of the recipe of", ->
+        itemNames = []
+        for item in findOne("Vampiric Scepter").getBuildsInto()
+          itemNames.push item.name
+        itemNames.should.eql ["Bilgewater Cutlass", "The Bloodthirster", "Wriggle's Lantern", "Zeke's Herald"]
+
     describe "getTotalCost", ->
 
       it "should add up the total costs of the items below it and the cost of the item", ->

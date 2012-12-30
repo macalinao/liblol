@@ -9,6 +9,9 @@ lol.items._list = {}
 # Represents an item in LoL.
 # 
 class lol.items.LoLItem
+  ##
+  # C'tor.
+  #
   constructor: (name, params) ->
     @name = name
 
@@ -35,12 +38,28 @@ class lol.items.LoLItem
     # Calculate stats
     @stats = lol.stats.combine [this]
 
+  ##
+  # Gets the recipe of this item in an array containing the LoLItems of this item.
+  #
   getRecipe: ->
     recipe = []
     for x in @recipe
       recipe.push lol.items.findOne(x)
     return recipe
 
+  ##
+  # Gets the items this item builds into.
+  #
+  getBuildsInto: ->
+    parents = []
+    for item in lol.items.find()
+      if item.recipe and item.recipe.indexOf(@name) isnt -1
+        parents.push item
+    return parents
+
+  ##
+  # Gets the cost of this item if no parts of the recipe had been bought yet.
+  #
   getTotalCost: ->
     return @cost unless @recipe
     cost = @cost
