@@ -39,9 +39,8 @@ lol.items =
 
     matches:
       propTypes: ["string"]
-      valTypes: ["object"]
+      valTypes: [RegExp]
       handler: (property, val) ->
-        throw new Error "Argument must be a regular expression!" unless val instanceof RegExp
         val.test property
 
   ##
@@ -193,29 +192,34 @@ lol.items =
             return false if item[property] isnt matcher
 
           # It's a query!
+          checkTypes = (types, value) ->
+            valid = false
+            for type in types
+              typeType = typeof type
+              valType = typeof value
+
+              if typeType is "string"
+                if valType is type
+                  valid = true; break
+
+              else if typeType is "function"
+                if value instanceof type
+                  valid = true; break
+
+              else
+                throw new Error "Unknown type '#{type.toString()}' specified in type array!"
+
+            return valid
+
           for handlerName, handler of lol.items._queryHandlers
             if matcher[handlerName]
               # Check if the property is of the right type
-              if handler.propTypes
-                prop = false
-                for type in handler.propTypes
-                  if typeof item[property] is type
-                    prop = true
-                    break
-                
-                unless prop
-                  throw new Error "Invalid type for property '#{item[property]}'! Available types are: #{handler.propTypes.join(", ")}"
-
+              if handler.propTypes and not checkTypes handler.propTypes, item[property]
+                throw new Error "Invalid type for property '#{item[property]}'! Available types are: #{handler.propTypes.join(", ")}"
+              
               # Check if the handler argument is of the right type for the handler
-              if handler.valTypes
-                val = false
-                for type in handler.valTypes
-                  if typeof matcher[handlerName] is type
-                    val = true
-                    break
-
-                unless val
-                  throw new Error "Invalid type for handler argument '#{matcher[handlerName]}'! Available types are: #{handler.valTypes.join(", ")}"
+              if handler.valTypes and not checkTypes handler.valTypes, matcher[handlerName]
+                throw new Error "Invalid type for handler argument '#{matcher[handlerName]}'! Available types are: #{handler.valTypes.join(", ")}"
 
               # Does not match filter unless the handler is triggered correctly
               return false unless handler.handler item[property], matcher[handlerName]
