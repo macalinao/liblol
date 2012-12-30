@@ -71,6 +71,11 @@ describe "items", ->
         longSword = findOne "Long Sword"
         longSword.getTotalCost().should.equal longSword.cost
 
+    describe "toString", ->
+
+      it "should use the item's name", ->
+        testItem.toString().should.equal testItem.name
+
   describe "find", ->
 
     it "should return all items when nothing is passed to it", ->
