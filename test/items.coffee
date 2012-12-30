@@ -217,7 +217,7 @@ describe "items", ->
       findOne("Hextech Gunblade").should.equal hextechGunblade
 
     it "should return null if no item was found", ->
-      true.should.equal findOne("Needlessly Small Rod") is null
+      chai.assert.isTrue findOne("Needlessly Small Rod") is null
 
   describe "sorts", ->
 
