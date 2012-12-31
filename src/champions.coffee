@@ -18,7 +18,7 @@ class LoLChampion
     stats = {}
 
     for stat in lol.stats.names
-      stats[stat] = (@baseStats[stat] || 0) + (level - 1) * (@statsPerLevel[stat] || 0)
+      stats[stat] = ((@baseStats[stat] || 0) unless stat is "as") + (level - 1) * (@statsPerLevel[stat] || 0)
 
     return stats
 
@@ -27,7 +27,7 @@ class LoLChampion
   # with the given items, masteries, and runes.
   # 
   getStats: (level, items, masteries, runes) ->
-    return lol.stats.combine [@getItemlessStats(level), lol.stats.combine(items), lol.stats.combine(masteries), lol.stats.combine(runes)]
+    return lol.stats.combine [@getVanillaStats(level), lol.stats.combine(items), lol.stats.combine(masteries), lol.stats.combine(runes)]
 
 lol.champions.list = {}
 lol.champions._def = (name, params) ->

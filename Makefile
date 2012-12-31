@@ -3,7 +3,7 @@ REPORTER = spec
 all: build test
 
 build:
-	toaster -cd
+	@./node_modules/coffee-toaster/bin/toaster -cd
 
 server:
 	cd build; python3 -m http.server
