@@ -132,8 +132,8 @@ lol.items =
       ret = []
       for itemName, item of lol.items._list
         ret.push item if filter item
-
       return ret
+
     else
         throw new Error "Invalid arguments for find!"
 

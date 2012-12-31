@@ -4,12 +4,26 @@
 # Jax is obviously not like this, but this is a template while I have no internet!
 lol.champions._def "Jax",
   baseStats:
-    health: 0
-    ap: 0
+    health: 463
+    hp5: 7.45
+    mana: 230
+    mp5: 6.4
+    range: 125
+    ad: 56.3
+    as: 0.638
+    armor: 18
+    mr: 30
+    ms: 350
 
   statsPerLevel:
-    health: 3.14
-    ap: 5.1
+    health: 98
+    hp5: 0.55
+    mana: 35
+    mp5: 0.7
+    ad: 3.375
+    as: 3.4
+    armor: 3.5
+    mr: 1.25
 
   skills:
     passive:
