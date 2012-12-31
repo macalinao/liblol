@@ -3,13 +3,13 @@ REPORTER = spec
 all: build test
 
 build:
-	@./node_modules/coffee-toaster/bin/toaster -cd
+	./node_modules/coffee-toaster/bin/toaster -cd
 
 server:
 	cd build; python3 -m http.server
 
 test:
-	@./node_modules/mocha/bin/mocha \
+	./node_modules/mocha/bin/mocha \
 		--reporter $(REPORTER) \
 		test/*.coffee
 
