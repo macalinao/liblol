@@ -71,7 +71,7 @@ describe "items", ->
         itemNames = []
         for item in findOne("Vampiric Scepter").getBuildsInto()
           itemNames.push item.name
-        itemNames.should.eql ["Bilgewater Cutlass", "The Bloodthirster", "Wriggle's Lantern", "Zeke's Herald"]
+        itemNames.sort().should.eql ["Bilgewater Cutlass", "The Bloodthirster", "Wriggle's Lantern", "Zeke's Herald"].sort()
 
     describe "getTotalCost", ->
 
