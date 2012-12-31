@@ -1,4 +1,4 @@
-liblol
+liblol [![Build Status](https://travis-ci.org/simplyianm/liblol.png?branch=master)](https://travis-ci.org/simplyianm/liblol)
 ======
 
 A library containing League of Legends data.
