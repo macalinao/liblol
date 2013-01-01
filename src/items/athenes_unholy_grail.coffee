@@ -1,10 +1,11 @@
 #<< items
-lol.items._def "Athene's Unoly Grail",
+lol.items._def "Athene's Unholy Grail",
   code: 3174
 
   ap: 60
   mr: 40
   mp5: 15
+
   cost: 920
   sell: 1960
 

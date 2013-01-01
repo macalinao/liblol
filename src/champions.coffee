@@ -42,10 +42,10 @@ class LoLChampion
 
   ##
   # Gets the stats of the champion at a given level
-  # with the given items, masteries, and runes.
+  # with the given build.
   # 
-  getStats: (level, items, masteries, runes) ->
-    return applyStats lol.stats.combine [@getAdditionalStats(level), lol.stats.combine(items), lol.stats.combine(masteries), lol.stats.combine(runes)]
+  getStats: (level, build) ->
+    return applyStats lol.stats.combine [@getAdditionalStats(level), lol.stats.combine(build.items), lol.stats.combine(build.masteries), lol.stats.combine(build.runes)]
 
 lol.champions.list = {}
 lol.champions._def = (name, params) ->
